@@ -1,0 +1,12 @@
+<% if logged_in? %>
+  <script type="text/javascript">
+    window.currentUser = <%= render(
+      "api/users/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
+  </script>
+<% end %>
+
+<script type="text/javascript">window.pay_up="<%= image_url("PayUp_logo.png") %>"</script>
+
+<main id="root">not working!</main>

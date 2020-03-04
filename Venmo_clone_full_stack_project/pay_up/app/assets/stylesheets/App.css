@@ -1,5 +1,9 @@
 .logo_container {
-    width: 10px;
+    
+}
+
+.resize {
+    width: 50px;
     height: auto;
     background-size: cover;
 }

@@ -15,7 +15,10 @@ class Greeting extends React.Component{
     render() {
         if(this.props.currentUser === undefined){
             return(
-                <div>
+                <div className='test'>
+                    <Link to="/">
+                        <img className='resize' src={window.pay_up} alt=""/>
+                    </Link>
                     <div className='signup'>New to Payup?
                         <Link to="/signup">Sign Up</Link>
                     </div>

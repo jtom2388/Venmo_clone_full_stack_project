@@ -1,4 +1,13 @@
+.test {
+    display: flex;
+    position: relative;
+    
+}
+
 .login {
-    float: right;
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
 }
 

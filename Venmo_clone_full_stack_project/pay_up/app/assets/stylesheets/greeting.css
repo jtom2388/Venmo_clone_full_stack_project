@@ -4,6 +4,12 @@
     
 }
 
+.signup {
+    display: flex;
+    position: absolute;
+    /* left: 70%; */
+}
+
 .login {
     display: flex;
     position: relative;
@@ -11,3 +17,35 @@
     left: 50%;
 }
 
+.signup-button {
+    background-color: lightgreen;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.signup-button :hover {
+    background-color: green;
+}
+
+.login-button {
+    background-color: lightgreen;
+    font-weight: bold;
+    display: flex;
+}
+
+.image {
+    border: solid 1px red;
+    height: 370px;
+    width: auto;
+}
+
+.content-image {
+    height: 350px;
+    width: 320px;
+}
+
+.resize {
+    width: 100px;
+    height: auto;
+    background-size: cover;
+}

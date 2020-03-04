@@ -15,16 +15,29 @@ class Greeting extends React.Component{
     render() {
         if(this.props.currentUser === undefined){
             return(
-                <div className='test'>
-                    <Link to="/">
-                        <img className='resize' src={window.pay_up} alt=""/>
-                    </Link>
-                    <div className='signup'>New to Payup?
-                        <Link to="/signup">Sign Up</Link>
+                <div className='main'>
+                    <div className='header'>
+                        <Link to="/">
+                            <img className='resize' src={window.pay_up} alt=""/>
+                        </Link>
+                        <div className='login'>
+                            <Link to="/login">
+                                <button className='login-button'>Log In</button>
+                            </Link>
+                        </div>
                     </div>
-                    <div className='login'>
-                        <Link to="/login">Log In</Link>
+                    <div className='content'>
+                        <div className='image'>
+                            <img className='content-image' src={window.content} alt=""/>
+                        </div>
+
+                        <div className='signup'>New to Payup?
+                            <Link to="/signup">
+                                <button className='signup-button'>Sign Up</button>
+                            </Link>
+                        </div>
                     </div>
+                    <br/>
                 </div>
             )
         } else {

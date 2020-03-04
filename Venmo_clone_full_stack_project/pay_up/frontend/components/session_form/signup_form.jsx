@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -35,6 +36,9 @@ class SignupForm extends React.Component {
         {this.props.errors.map( (error, i) => (
             <li key={`${i}`}>{error}</li>
         ))}
+        <Link to="/">
+          <img className='resize' src={window.pay_up} alt=""/>
+        </Link>
         <h1>{this.props.formtype}</h1>
         <form onSubmit={this.handleSubmit}>
           <label>Username:

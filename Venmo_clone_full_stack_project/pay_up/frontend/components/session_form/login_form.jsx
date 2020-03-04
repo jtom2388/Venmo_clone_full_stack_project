@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -35,16 +36,24 @@ class LoginForm extends React.Component {
         {this.props.errors.map( (error, i) => (
             <li key={`${i}`}>{error}</li>
         ))}
-        <h1>{this.props.formtype}</h1>
+        <Link to="/">
+          <img className='resize' src={window.pay_up} alt=""/>
+        </Link>
+        <h1>Log in to PayUp</h1>
+        <div className='form'>
         <form onSubmit={this.handleSubmit}>
-          <label>Username:
-            <input onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
-          </label>
-          <label>Password:
-            <input onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
-          </label>
-          <input type="submit" value={this.props.formtype}/>   
+            <fieldset className='inputs'>
+            <label>Username:
+              <input className='auth-form-input' onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
+            </label>
+            <br/>
+            <label>Password:
+              <input onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
+            </label>
+            <input type="submit" value={this.props.formtype}/>
+          </fieldset>   
         </form>
+        </div>
       </div>
     )
   }

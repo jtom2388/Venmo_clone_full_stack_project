@@ -27,31 +27,39 @@ class LoginForm extends React.Component {
 
   handleInput(inputType) {
     return e => this.setState({[inputType]: e.target.value})
+  }
 
+  componentWillUnmount() {
+    this.props.clearSessionErrors()
   }
 
   render() {
     return (
       <div>
+        <Link to="/">
+          <img className='payup-logo' src={window.pay_up} alt=""/>
+        </Link>
+        <h1 className='login-title'>Log in to PayUp</h1>
+        <br/>
+        <div className='form'>
+        <form onSubmit={this.handleSubmit}>
         {this.props.errors.map( (error, i) => (
             <li key={`${i}`}>{error}</li>
         ))}
-        <Link to="/">
-          <img className='resize' src={window.pay_up} alt=""/>
-        </Link>
-        <h1>Log in to PayUp</h1>
-        <div className='form'>
-        <form onSubmit={this.handleSubmit}>
-            <fieldset className='inputs'>
-            <label>Username:
-              <input className='auth-form-input' onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
-            </label>
-            <br/>
-            <label>Password:
-              <input onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
-            </label>
-            <input type="submit" value={this.props.formtype}/>
-          </fieldset>   
+          <fieldset className='inputs'>
+              <label className='login-username'>Username:
+                <input className='auth-form-input' onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
+              </label>
+              <br/>
+              <label>Password:
+                <input className='auth-form-input' onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
+              </label>
+              <br/>
+              <input className='login-submit' type="submit" value={this.props.formtype}/>
+          </fieldset>
+          <p>New to PayUp?
+            <Link to="/signup">Create an account now!</Link>
+          </p>
         </form>
         </div>
       </div>

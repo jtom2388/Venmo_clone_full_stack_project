@@ -18,7 +18,7 @@ class Greeting extends React.Component{
                 <div className='main'>
                     <div className='header'>
                         <Link to="/">
-                            <img className='resize' src={window.pay_up} alt=""/>
+                            <img className='payup-logo' src={window.pay_up} alt=""/>
                         </Link>
                         <div className='login'>
                             <Link to="/login">
@@ -31,7 +31,8 @@ class Greeting extends React.Component{
                             <img className='content-image' src={window.content} alt=""/>
                         </div>
 
-                        <div className='signup'>New to Payup?
+                        <div className='signup'>
+                            <p className='welcome-message'>No wallets or cards needed here. Join PayUp now!</p>
                             <Link to="/signup">
                                 <button className='signup-button'>Sign Up</button>
                             </Link>

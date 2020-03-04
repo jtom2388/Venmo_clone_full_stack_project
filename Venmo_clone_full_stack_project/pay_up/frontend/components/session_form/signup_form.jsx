@@ -27,28 +27,40 @@ class SignupForm extends React.Component {
 
   handleInput(inputType) {
     return e => this.setState({[inputType]: e.target.value})
+  }
 
+  componentWillUnmount() {
+    this.props.clearSessionErrors()
   }
 
   render() {
     return (
       <div>
+        <Link to="/">
+          <img className='payup-logo' src={window.pay_up} alt=""/>
+        </Link>
+        <h1 className='signup-title'>Join PayUp Now</h1>
+        <br/>
+        <div className='form'>
+        <form onSubmit={this.handleSubmit}>
         {this.props.errors.map( (error, i) => (
             <li key={`${i}`}>{error}</li>
         ))}
-        <Link to="/">
-          <img className='resize' src={window.pay_up} alt=""/>
-        </Link>
-        <h1>{this.props.formtype}</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>Username:
-            <input onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
-          </label>
-          <label>Password:
-            <input onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
-          </label>
-          <input type="submit" value={this.props.formtype}/>   
+          <fieldset className='inputs'>
+            <label>Username:
+              <input className='auth-form-input' onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
+            </label>
+            <label>Password:
+              <input className='auth-form-input' onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
+            </label>
+        <br/>
+            <input type="submit" value={this.props.formtype}/>   
+          </fieldset>
+        <p>Already have an account?
+          <Link to="/login">Log in now!</Link>
+        </p>
         </form>
+        </div>
       </div>
     )
   }

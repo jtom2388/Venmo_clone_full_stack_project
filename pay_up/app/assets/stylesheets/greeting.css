@@ -36,8 +36,8 @@
     margin-left: 35%;
     margin-top: 5%;
     padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-radius: 12px;
     /* display: inline-block; */
 }
@@ -49,11 +49,11 @@
 .login-button {
     background-color: lightgreen;
     font-weight: bold;
-    margin-top: 30%;
+    margin-top: 25%;
     /* width: 50%; */
     padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-radius: 12px;
 }
 

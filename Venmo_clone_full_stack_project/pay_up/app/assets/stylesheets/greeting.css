@@ -1,0 +1,94 @@
+.main {
+    /* display: flex; */
+    /* position: absolute;
+    justify-content: center; */
+    margin-left: 150px;
+    margin-right: 250px;
+    min-width: 1000px;
+}
+
+.signup {
+    /* display: inline-block;
+    align-items: center;
+    position: relative; */
+    /* width: 45%;
+    left: 53%; */
+    /* top: 50%; */
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 10%;
+    /* border: blue 1px solid; */
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    margin-right: 200px;
+    /* position: relative; */
+    /* top: 50%; */
+    /* left: 50%; */
+}
+
+.signup-button {
+    background-color: lightgreen;
+    font-weight: bold;
+    /* margin-top: 50%; */
+    margin-left: 35%;
+    margin-top: 5%;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 12px;
+    /* display: inline-block; */
+}
+
+.signup-button :hover{
+    background-color: green;
+}
+
+.login-button {
+    background-color: lightgreen;
+    font-weight: bold;
+    margin-top: 30%;
+    /* width: 50%; */
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 12px;
+}
+
+.image {
+    /* border: solid 1px red; */
+    height: 370px;
+    width: 50%;
+}
+
+.content-image {
+    height: 350px;
+    width: 400px;
+    justify-content: center;
+}
+
+.payup-logo {
+    width: 100px;
+    height: auto;
+}
+
+.header {
+    /* border: solid green 1px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+}
+
+.welcome-message {
+    margin-left: 10%;
+    margin-right: 10%;
+    /* margin-top: 40%; */
+    font-size: 40px;
+}

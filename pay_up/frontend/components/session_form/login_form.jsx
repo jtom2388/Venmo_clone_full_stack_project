@@ -11,12 +11,18 @@ class LoginForm extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
       this.updateUsername = this.updateUsername.bind(this);
       this.handleInput = this.handleInput.bind(this);
-      
+      this.handleDemo = this.handleDemo.bind(this);
     }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const user = {username: 'demo', password: '123456'};
     this.props.processForm(user);
   }
 
@@ -56,6 +62,7 @@ class LoginForm extends React.Component {
               </label>
               <br/>
               <input className='login-submit' type="submit" value={this.props.formtype}/>
+              <button onClick={this.handleDemo}>Demo User</button>
           </fieldset>
           <p>New to PayUp?
             <Link to="/signup">Create an account now!</Link>

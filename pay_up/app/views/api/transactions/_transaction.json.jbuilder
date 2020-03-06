@@ -1,0 +1,1 @@
+json.extract! transaction, :id, :amount, :body, :payer_id, :recipient_id

@@ -44,6 +44,9 @@ class Greeting extends React.Component{
         } else {
             return (
                 <div>
+                    <Link to="/">
+                        <img className='payup-logo' src={window.pay_up} alt=""/>
+                    </Link>
                     <h1>Welcome {this.props.currentUser.username}</h1>
                     <button onClick={this.handleLogout}>Log Out</button>
                 </div>

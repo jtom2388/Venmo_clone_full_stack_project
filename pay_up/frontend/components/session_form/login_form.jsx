@@ -17,13 +17,17 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(
+      () => this.props.history.push('/home')
+    )
   }
 
   handleDemo(e) {
     e.preventDefault();
     const user = {username: 'demo', password: '123456'};
-    this.props.processForm(user);
+    this.props.processForm(user).then(
+      () => this.props.history.push('/home')
+    )
   }
 
   updateUsername(e) {
@@ -61,7 +65,7 @@ class LoginForm extends React.Component {
                 <input className='auth-form-input' onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
               </label>
               <br/>
-              <input className='login-submit' type="submit" value={this.props.formtype}/>
+              <input className='login-submit' type="submit" onClick={this.handleSubmit}/>
               <button onClick={this.handleDemo}>Demo User</button>
           </fieldset>
           <p>New to PayUp?

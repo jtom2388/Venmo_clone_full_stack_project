@@ -19,7 +19,7 @@ export const fetchAllTransactions = () => dispatch => (
     )
 )
 
-export const fetchTransaction = transaction => dispatch => (
+export const createTransaction = transaction => dispatch => (
     TransactionAPIUtil.createTransaction(transaction).then(
         transaction => dispatch(receiveTransaction(transaction))
     )

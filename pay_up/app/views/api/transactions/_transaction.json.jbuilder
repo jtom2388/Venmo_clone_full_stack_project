@@ -1,1 +1,3 @@
-json.extract! transaction, :id, :amount, :body, :payer_id, :recipient_id
+json.extract! transaction, :id, :amount, :body
+json.payer transaction.payer.username
+json.recipient transaction.recipient.username

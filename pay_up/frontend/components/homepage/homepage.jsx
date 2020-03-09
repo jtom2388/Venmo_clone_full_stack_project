@@ -21,8 +21,15 @@ class Homepage extends React.Component{
                 <Link to="/home">
                     <img className='payup-logo' src={window.pay_up} alt=""/>
                 </Link>
-                <h1>Welcome {this.props.currentUser.username}</h1>
-                <button onClick={this.handleLogout}>Log Out</button>
+                <div className='currentUser-info'>
+                    <div className='welcome'>
+                        Welcome {this.props.currentUser.username}
+                    </div>
+                    <div className='current-user-balance'>
+                        balance: ${this.props.currentUser.balance}
+                    </div>
+                </div>
+                <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
                 <div>
                     <UserIndex fetchAllUsers={this.props.fetchAllUsers} users={this.props.users}/>
                     <TransactionIndex fetchAllTransactions={this.props.fetchAllTransactions} transactions={this.props.transactions} />

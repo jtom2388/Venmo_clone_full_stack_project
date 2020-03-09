@@ -1,6 +1,6 @@
 import React from 'react';
 
-class transactionForm extends React.Component{
+class TransactionForm extends React.Component{
     constructor(props){
         super(props);
         this.state = this.props.transaction;

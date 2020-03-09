@@ -1,0 +1,73 @@
+.payup-logo{
+    left: 50%;
+}
+
+.currentUser-info{
+    border: gray 1px solid;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.balance{
+    color: green;
+}
+
+
+.logout-button{
+    background-color: lightgreen;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 12px;
+    right: 10%;
+    top: 5%;
+    position: absolute;
+    flex-direction: row;
+}
+
+.logout-button:hover{
+    background-color: green;
+    color: white;
+}
+
+.transaction{
+    border: gray solid 1px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.transaction-amount{
+    color: red;
+    text-align: right;
+}
+
+.usernames{
+    border: red 1px solid;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: right;
+    right: 10%;
+}
+
+.pay-button{
+    background-color: lightgreen;
+    border-radius: 12px;
+}
+
+.pay-button:hover{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.request-button{
+    background-color: lightskyblue;
+    border-radius: 12px;
+}
+
+.request-button:hover{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}

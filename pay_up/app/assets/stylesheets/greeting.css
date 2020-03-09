@@ -42,7 +42,7 @@
     /* display: inline-block; */
 }
 
-.signup-button :hover{
+.signup-button:hover{
     background-color: green;
 }
 

@@ -5,7 +5,7 @@ export const fetchRequests = () => {
     })
 }
 
-export const createRequest = () => {
+export const createRequest = request => {
     return $.ajax({
         url:`/api/requests`,
         method: 'POST',

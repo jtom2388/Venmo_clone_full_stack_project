@@ -12,7 +12,6 @@ const mapStateToProps = state => ({
         recipient_id: ''
     },
     username: state.ui.modalUserReducer.username,
-    // userId: state.ui.modalUserReducer.id,
     currentUserId: state.session.id,
     users: Object.values(state.entities.user)
 })

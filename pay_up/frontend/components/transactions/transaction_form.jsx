@@ -8,10 +8,6 @@ class TransactionForm extends React.Component{
         
     }
 
-    // componentDidUpdate(){
-    //     this.props.fetchAllTransactions()
-    // }
-
     handleSubmit(e, username){
         e.preventDefault();
         this.props.users.map(user => {

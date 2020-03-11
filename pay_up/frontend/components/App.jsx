@@ -7,9 +7,13 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import {Link} from 'react-router-dom'
 import Greeting from './greeting/greeting';
 import HomepageContainer from './homepage/homepage_container';
+import Modal from './modal/modal';
+import CreateTransactionContainer from './transactions/create_transaction_container';
 
 const App = () => (
   <div>
+    <Modal />
+    
     <Route exact path="/" component={GreetingContainer} />
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />

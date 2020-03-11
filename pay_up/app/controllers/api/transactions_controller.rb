@@ -1,9 +1,11 @@
 class Api::TransactionsController < ApplicationController
 
     def create
+        
         @transaction = Transaction.new(trans_params)
         if @transaction.save
             @payer = User.find_by(id: params[:transaction][:payer_id])
+            
             @recipient = User.find_by(id: params[:transaction][:recipient_id])
             @payer.payer_change(@transaction.amount)
             @recipient.recipient_change(@transaction.amount)

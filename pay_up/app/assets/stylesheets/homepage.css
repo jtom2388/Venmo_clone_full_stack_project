@@ -2,12 +2,6 @@
     left: 50%;
 }
 
-.currentUser-info{
-    border: gray 1px solid;
-    margin-right: 100px;
-    margin-left: 100px;
-}
-
 .balance{
     color: green;
 }
@@ -24,6 +18,7 @@
     top: 5%;
     position: absolute;
     flex-direction: row;
+    margin-right: 80px;
 }
 
 .logout-button:hover{
@@ -32,27 +27,59 @@
 }
 
 .transaction{
-    border: gray solid 1px;
-    margin-right: 100px;
-    margin-left: 100px;
+    border: lightgray solid 1px;
+    margin-right: 500px;
+    margin-left: 300px;
+}
+
+.transaction-section{
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.transaction-info{
+    display: flex;
+    justify-content: space-between;
 }
 
 .transaction-amount{
     color: red;
-    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.transaction-message{
+    margin-top: 20px;
 }
 
 .usernames{
+    display: flex;
+    justify-content: space-evenly;
     border: red 1px solid;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 400px;
+    margin-right: 200px;
     text-align: right;
     right: 10%;
+}
+
+.name{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+}
+
+.pay{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
 }
 
 .pay-button{
     background-color: lightgreen;
     border-radius: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .pay-button:hover{
@@ -61,13 +88,55 @@
     font-weight: bold;
 }
 
+.request{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+}
+
 .request-button{
     background-color: lightskyblue;
     border-radius: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .request-button:hover{
     background-color: blue;
     color: white;
+    font-weight: bold;
+}
+
+.collapsible{
+    float: right;
+}
+
+.collapsible:hover{
+    background-color: green;
+}
+
+.usernames-info{
+    /* display: none;
+    overflow: hidden; */
+}
+
+.currentUser-info{
+    border: gray 1px solid;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.welcome{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.homepage{
+    background-color: rgb(231, 231, 231);
+}
+
+.current-user-balance{
+    padding: 10px;
+    color: green;
     font-weight: bold;
 }

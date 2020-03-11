@@ -14,6 +14,7 @@ export const fetchTransactions = () => {
 // }
 
 export const createTransaction = transaction => {
+    
     return $.ajax({
         url: `/api/transactions`,
         method: 'POST',

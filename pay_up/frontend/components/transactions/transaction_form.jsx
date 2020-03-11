@@ -5,11 +5,27 @@ class TransactionForm extends React.Component{
         super(props);
         this.state = this.props.transaction;
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
-    handleSubmit(e){
+    // componentDidUpdate(){
+    //     this.props.fetchAllTransactions()
+    // }
+
+    handleSubmit(e, username){
         e.preventDefault();
-        this.props.createTransaction(this.state);
+        this.props.users.map(user => {
+            if(user.username === username) {
+                this.userId = user.id
+            }
+        })
+        
+        this.props.createTransaction({
+            amount: this.state.amount,
+            body: this.state.body,
+            payer_id: this.props.currentUserId,
+            recipient_id: this.userId
+        });
     }
 
     update(field){
@@ -17,11 +33,23 @@ class TransactionForm extends React.Component{
     }
 
     render(){
+        
         return(
-            
+            <div>
+                <form onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
+                    <label>Recipient:
+                        <input type="text" value={this.props.username}/>
+                    </label>
+                    <input type="text" onChange={this.update('amount')} placeholder="$0"/>
+                    <br/>
+                    <input type="text" onChange={this.update('body')} placeholder="What's it for?"/>
+                    <br/>
+                    <button type='submit'>Pay</button>
+                </form>
+            </div>
         )
     }
 }
 
 
-export default transactionForm;
+export default TransactionForm;

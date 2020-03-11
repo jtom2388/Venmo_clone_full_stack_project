@@ -59,26 +59,37 @@
     font-size: 26px;
 }
 
-.usernames{
+.usernames-container{
     display: flex;
-    justify-content: space-evenly;
-    border: red 1px solid;
-    margin-left: 400px;
-    margin-right: 300px;
+}
+
+.usernames{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 80px auto 80px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 20%;
+    height: 100px;
     text-align: right;
-    right: 10%;
+    border: black solid 1px;
+}
+
+.usernames > div {
+    padding: 3em;
+    flex-direction: row;
 }
 
 .name{
-    padding-top: 8px;
+    /* padding-top: 8px;
     padding-bottom: 8px;
-    padding-right: 12px;
+    padding-right: 12px; */
 }
 
 .pay{
-    padding-top: 8px;
+    /* padding-top: 8px;
     padding-bottom: 8px;
-    padding-right: 12px;
+    padding-right: 12px; */
 }
 
 .pay-button{
@@ -95,9 +106,9 @@
 }
 
 .request{
-    padding-top: 8px;
+    /* padding-top: 8px;
     padding-bottom: 8px;
-    padding-right: 12px;
+    padding-right: 12px; */
 }
 
 .request-button{
@@ -128,8 +139,8 @@
 
 .currentUser-info{
     border: gray 1px solid;
-    margin-right: 200px;
-    margin-left: 200px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .welcome{
@@ -145,4 +156,18 @@
     padding: 10px;
     color: green;
     font-weight: bold;
+}
+
+.top-level-container{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 10000px;
+    height: auto;
+    transition: all 300ms ease-in-out;
+}
+
+.hide-users {
+    transition: all 300ms ease-in-out;
+    max-height: 0;
 }

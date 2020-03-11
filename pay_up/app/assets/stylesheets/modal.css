@@ -14,3 +14,32 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .submit-transaction {
+    border-radius: 12px;
+    background-color: lightgreen;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .transaction-header{
+    color: rgb(231, 231, 231);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .amount-paid{
+    font-size: 20px;
+  }
+
+  .recipient{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-variant-ligatures: historical-ligatures;
+    font-size: 20px;
+  }
+
+  .payment-message{
+    font-size: 20px;
+    width: 516px;
+  }

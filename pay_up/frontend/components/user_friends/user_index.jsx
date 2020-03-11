@@ -30,7 +30,7 @@ class UserIndex extends React.Component{
             openModal={this.props.openModal} />
         })
         return (
-            <div>
+            <div className='top-level-container'>
                 {users}
             </div>
         )

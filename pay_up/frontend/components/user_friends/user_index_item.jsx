@@ -19,7 +19,7 @@ class UserIndexItem extends React.Component{
     render(){
         
         return(
-            <div>
+            <div className='usernames-container'>
                 <div className='usernames'>
                     <div className='name'>
                        {this.props.user.username}

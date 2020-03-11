@@ -21,6 +21,7 @@ class UserIndex extends React.Component{
     }
 
     render(){
+        console.log(this.props);
         if(!this.props.users) return null
         const users = this.props.users.map((user, i) => {
             return <UserIndexItem user={user} key={i} 
@@ -29,8 +30,10 @@ class UserIndex extends React.Component{
             createRequest={this.props.createRequest} 
             openModal={this.props.openModal} />
         })
+
+        const hideUsers = this.props.hideUsers ? 'hide-users' : '';
         return (
-            <div className='top-level-container'>
+            <div className={`top-level-container ${hideUsers}`}>
                 {users}
             </div>
         )

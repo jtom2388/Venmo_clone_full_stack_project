@@ -9,6 +9,8 @@ class Homepage extends React.Component{
     constructor(props){
         super(props);
         this.handleLogout = this.handleLogout.bind(this);
+        this.state = { hideUsers: true };
+        this.toggleUsers = this.toggleUsers.bind(this);
     }
 
     handleLogout(){
@@ -17,6 +19,10 @@ class Homepage extends React.Component{
 
     componentDidMount(){
         this.props.fetchAllUsers();
+    }
+
+    toggleUsers() {
+        this.setState({ hideUsers: !this.state.hideUsers });
     }
 
     render() {
@@ -29,7 +35,7 @@ class Homepage extends React.Component{
                 <div className='currentUser-info'>
                     <div className='welcome'>
                         Welcome {this.props.currentUser.username}
-                        <button className='collapsible'>Users</button>
+                        <button onClick={this.toggleUsers} className='collapsible'>Users</button>
                     </div>
                     <div className='current-user-balance'>
                         balance: ${this.props.currentUser.balance}
@@ -37,7 +43,7 @@ class Homepage extends React.Component{
                 </div>
                 <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
                 <div>
-                    <UserIndexContainer />
+                    <UserIndexContainer hideUsers={this.state.hideUsers} />
                     <TransactionIndexContainer />
                     <RequestIndexContainer />
                 </div>

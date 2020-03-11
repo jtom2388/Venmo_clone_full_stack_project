@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import { createRequest, fetchAllRequests } from '../../actions/request_action';
 import { openModal, closeModal } from '../../actions/modal_actions'
+import RequestForm from './request_form';
 
 const mapStateToProps = state => ({
     request: {
@@ -20,3 +21,4 @@ const mapDispatchToProps = dispatch => ({
     fetchAllRequests: () => dispatch(fetchAllRequests())
 })
 
+export default connect(mapStateToProps, mapDispatchToProps)(RequestForm);

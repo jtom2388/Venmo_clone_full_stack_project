@@ -12,10 +12,6 @@ class UserIndexItem extends React.Component{
         this.props.createTransaction(this.state.transaction);
     }
 
-    // componentDidUpdate(){
-    //     this.props.fetchAllTransactions();
-    // }
-
     update(field){
         return e => this.setState({transaction:{ [field]: e.currentTarget.value }})
     }
@@ -32,7 +28,7 @@ class UserIndexItem extends React.Component{
                         <button className='pay-button' onClick={(() => this.props.openModal('PAY', this.props.user.username))}>Pay</button>
                     </div>
                     <div className='request'>
-                        <button className='request-button'>Request</button>
+                        <button className='request-button' onClick={(() => this.props.openModal('REQUEST', this.props.user.username))}>Request</button>
                     </div>
                     
                 </div>

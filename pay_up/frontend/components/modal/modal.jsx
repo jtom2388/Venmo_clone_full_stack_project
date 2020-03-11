@@ -2,7 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import CreateTransactionContainer from '../transactions/create_transaction_container';
-
+import CreateRequestContainer from '../request/create_request_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -12,6 +12,9 @@ function Modal({modal, closeModal}) {
   switch (modal) {
     case 'PAY':
       component = <CreateTransactionContainer />;
+      break;
+    case 'REQUEST':
+      component = <CreateRequestContainer />;
       break;
     default:
       return null;

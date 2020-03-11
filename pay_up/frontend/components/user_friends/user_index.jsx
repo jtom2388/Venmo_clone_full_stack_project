@@ -23,7 +23,11 @@ class UserIndex extends React.Component{
     render(){
         if(!this.props.users) return null
         const users = this.props.users.map((user, i) => {
-            return <UserIndexItem user={user} key={i} transaction={this.props.transaction} createTransaction={this.props.createTransaction} openModal={this.props.openModal} />
+            return <UserIndexItem user={user} key={i} 
+            transaction={this.props.transaction} 
+            createTransaction={this.props.createTransaction}
+            createRequest={this.props.createRequest} 
+            openModal={this.props.openModal} />
         })
         return (
             <div>

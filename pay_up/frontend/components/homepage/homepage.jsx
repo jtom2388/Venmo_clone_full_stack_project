@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import TransactionIndexContainer from '../transactions/transaction_index_container';
 import UserIndexContainer from '../user_friends/user_index_container';
+import RequestIndexContainer from '../request/request_index_container';
 
 class Homepage extends React.Component{
     
@@ -38,6 +39,7 @@ class Homepage extends React.Component{
                 <div>
                     <UserIndexContainer />
                     <TransactionIndexContainer />
+                    <RequestIndexContainer />
                 </div>
             </div>
         )

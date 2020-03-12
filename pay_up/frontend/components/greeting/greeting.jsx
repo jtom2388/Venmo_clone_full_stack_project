@@ -31,7 +31,7 @@ class Greeting extends React.Component{
                         </div>
 
                         <div className='signup'>
-                            <p className='welcome-message'>No wallets or cards needed here. Join PayUp now!</p>
+                            <p className='welcome-message'>Pay on the go or from any available computer. Join PayUp now!</p>
                             <Link to="/signup">
                                 <button className='signup-button'>Sign Up</button>
                             </Link>

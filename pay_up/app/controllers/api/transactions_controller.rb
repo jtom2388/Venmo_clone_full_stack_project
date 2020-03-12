@@ -9,7 +9,6 @@ class Api::TransactionsController < ApplicationController
             @recipient = User.find_by(id: params[:transaction][:recipient_id])
             @payer.payer_change(@transaction.amount)
             @recipient.recipient_change(@transaction.amount)
-            debugger
         end
         render '/api/transactions/show'
     end

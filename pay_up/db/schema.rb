@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_05_190329) do
+ActiveRecord::Schema.define(version: 2020_03_12_183556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 2020_03_05_190329) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "balance"
     t.bigint "account_number"
+    t.float "balance", default: 1000.0
   end
 
 end

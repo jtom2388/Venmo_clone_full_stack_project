@@ -17,7 +17,7 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :session_token, :account_number, presence: true, uniqueness: true
     validates :password, length: { minimum: 6, allow_nil: true }
-    after_initialize :ensure_session_token, :generate_account_number, :default_balance
+    after_initialize :ensure_session_token, :generate_account_number
     attr_reader :password
 
     has_many :paid_transactions,
@@ -73,10 +73,11 @@ class User < ApplicationRecord
         self.save!
     end
 
-    def default_balance
-        self.balance = 1000
-        self.save!
-    end
+    # def default_balance
+    #     debugger
+    #     self.balance = 1000
+    #     self.save!
+    # end
 
     def payer_change(amount)
         self.balance -= amount

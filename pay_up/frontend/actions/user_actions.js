@@ -19,7 +19,7 @@ export const fetchAllUsers = () => dispatch => (
     )
 )
 
-export const updatePayer = user => dispatch => (
+export const fetchUser = user => dispatch => (
     UserAPIUtil.updatePayer(user).then(
         user => dispatch(receiveUpdatedUser(user))
     )

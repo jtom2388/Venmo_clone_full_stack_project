@@ -24,6 +24,7 @@ class Homepage extends React.Component{
     toggleUsers() {
         this.setState({ hideUsers: !this.state.hideUsers });
     }
+    
 
     render() {
 
@@ -35,7 +36,9 @@ class Homepage extends React.Component{
                 <div className='currentUser-info'>
                     <div className='welcome'>
                         Welcome {this.props.currentUser.username}
-                        <button onClick={this.toggleUsers} className='collapsible'>Users</button>
+                    </div>
+                    <div className='show-user-button'>
+                        <button onClick={this.toggleUsers} className='collapsible'>Show Users</button>
                     </div>
                     <div className='current-user-balance'>
                         balance: ${this.props.currentUser.balance}

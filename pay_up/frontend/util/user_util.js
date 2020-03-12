@@ -5,11 +5,11 @@ export const fetchAllUsers = () => {
     })
 }
 
-export const updatePayer = payer => {
+export const updatePayer = username => {
     return $.ajax({
-        url: `/api/users/${payer.id}`,
-        method: 'PATCH',
-        data: { payer }
+        url: `/api/users/${username}`,
+        method: 'GET',
+        data: { user: username }
     })
 }
 

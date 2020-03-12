@@ -13,6 +13,12 @@ class Api::UsersController < ApplicationController
       @users = User.all
       render :index
     end
+
+    def show
+      debugger
+      @user = User.find_by(username: params[:user][:username])
+      render :show
+    end
     
     private
 

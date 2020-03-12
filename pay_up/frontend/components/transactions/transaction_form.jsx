@@ -21,7 +21,7 @@ class TransactionForm extends React.Component{
             body: this.state.body,
             payer_id: this.props.currentUserId,
             recipient_id: this.userId
-        });
+        }).then(user => this.props.fetchUser(user))
     }
 
     update(field){

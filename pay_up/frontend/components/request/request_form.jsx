@@ -31,14 +31,15 @@ class RequestForm extends React.Component{
         return(
             <div>
                 <form onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
-                    <label>Requestee:
-                        <input type="text" value={this.props.username}/>
+                    <h1 className='request-header'>Request</h1>
+                    <label>
+                        <input className='requestee' type="text" value={this.props.username}/>
                     </label>
-                    <input type="text" onChange={this.update('amount')} placeholder="$0"/>
+                    <input className='amount-requested' type="text" onChange={this.update('amount')} placeholder="$0"/>
                     <br/>
-                    <input type="text" onChange={this.update('body')} placeholder="What's it for?"/>
+                    <input className='request-message' type="text" onChange={this.update('body')} placeholder="What's it for?"/>
                     <br/>
-                    <button type='submit'>Request</button>
+                    <button type='submit' className='submit-request'>Request</button>
                 </form>
             </div>
         )

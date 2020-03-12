@@ -31,8 +31,8 @@ export const createRequest = request => dispatch => (
     )
 )
 
-export const deleteRequest = requestId => {
+export const deleteRequest = requestId => (
     RequestAPIUtil.deleteRequest(requestId).then(
         () => dispatch(removeRequest(requestId))
     )
-}
+)

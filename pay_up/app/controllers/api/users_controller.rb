@@ -17,7 +17,6 @@ class Api::UsersController < ApplicationController
     def show
       @payer = User.find_by(username: params[:user][:transaction][:payer])
       @recipient = User.find_by(username: params[:user][:transaction][:recipient])
-      debugger
       render :show
     end
     

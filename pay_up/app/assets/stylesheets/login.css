@@ -49,3 +49,7 @@ form {
 .payup-logo {
     margin-left: 200px;
 }
+
+.error-text {
+    color: red;
+}

@@ -22,6 +22,8 @@ class TransactionForm extends React.Component{
             payer_id: this.props.currentUserId,
             recipient_id: this.userId
         }).then(user => this.props.fetchUser(user))
+
+        this.props.closeModal();
     }
 
     update(field){

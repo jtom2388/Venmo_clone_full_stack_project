@@ -10,7 +10,7 @@ class TransactionForm extends React.Component{
 
     handleSubmit(e, username){
         e.preventDefault();
-        this.props.users.map(user => {
+        this.props.allUsers.map(user => {
             if(user.username === username) {
                 this.userId = user.id
             }
@@ -24,6 +24,10 @@ class TransactionForm extends React.Component{
         }).then(user => this.props.fetchUser(user))
 
         this.props.closeModal();
+    }
+
+    componentDidMount(){
+        
     }
 
     update(field){

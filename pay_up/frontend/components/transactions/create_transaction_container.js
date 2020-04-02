@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
     },
     username: state.ui.modalUserReducer.username,
     currentUserId: state.session.id,
-    users: Object.values(state.entities.user)
+    allUsers: Object.values(state.entities.user)
 })
 
 const mapDispatchToProps = dispatch => ({

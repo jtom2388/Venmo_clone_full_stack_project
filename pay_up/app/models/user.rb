@@ -74,15 +74,11 @@ class User < ApplicationRecord
         # self.save!
     end
 
-    # def default_balance
-    #     debugger
-    #     self.balance = 1000
-    #     self.save!
-    # end
-
     def payer_change(amount)
-        self.balance -= amount
-        self.save!
+        if self.balance > amount
+            self.balance -= amount
+            self.save!
+        end
     end
 
     def recipient_change(amount)

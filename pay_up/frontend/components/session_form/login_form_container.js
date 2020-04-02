@@ -3,7 +3,7 @@ import { login, clearSessionErrors } from '../../actions/session_actions';
 import LoginForm from './login_form';
 
 const mapStatetoProps = (state, ownProps) => ({
-    errors: state.errors.session,
+    errors: state.errors.sessionErrors,
     formtype: 'login',
     ownProps
 })

@@ -16,8 +16,9 @@ class User < ApplicationRecord
     validates :username, presence: true, uniqueness: true
     validates :password_digest, presence: true
     validates :session_token, :account_number, presence: true, uniqueness: true
-    validates :password, length: { minimum: 6, allow_nil: true }
-    after_initialize :ensure_session_token, :generate_account_number
+    validates :password, length: { minimum: 6 }, allow_nil: true 
+    after_initialize :ensure_session_token
+    before_validation :generate_account_number
     attr_reader :password
 
     has_many :paid_transactions,
@@ -70,7 +71,7 @@ class User < ApplicationRecord
 
     def generate_account_number
         self.account_number = rand.to_s[2..10].to_i
-        self.save!
+        # self.save!
     end
 
     # def default_balance

@@ -5,7 +5,8 @@ class Api::UsersController < ApplicationController
           log_in(@user)
           render '/api/users/show'
         else
-          render json: @user.errors.full_messages, status: 422
+          # render json: @user.errors.full_messages, status: 422
+          render json: ['Password is too short. Must be at least 6 characters long.'], status: 422
         end
     end
 

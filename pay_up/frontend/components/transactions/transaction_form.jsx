@@ -26,10 +26,6 @@ class TransactionForm extends React.Component{
         this.props.closeModal();
     }
 
-    componentDidMount(){
-        
-    }
-
     update(field){
         return e => this.setState({ [field]: e.currentTarget.value })
     }
@@ -41,6 +37,9 @@ class TransactionForm extends React.Component{
                 <form onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
                     <h1 className='transaction-header'>Pay</h1>
                     <h2 className='balance-header'></h2>
+                    {this.props.transactionErrors.map( (error, i) => (
+                        <div className='trans-error' key={`${i}`}>{error}</div>
+                    ))}
                     <label>
                         <input className='recipient' type="text" value={this.props.username}/>
                     </label>

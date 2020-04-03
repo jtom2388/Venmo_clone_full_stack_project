@@ -14,9 +14,9 @@ const receiveTransaction = transaction => ({
     transaction
 })
 
-const receiveTransactionErrors = tranErrors => ({
+const receiveTransactionErrors = transactionErrors => ({
     type: RECEIVE_TRANSACTION_ERRORS,
-    tranErrors
+    transactionErrors
 })
 
 export const fetchAllTransactions = () => dispatch => (
@@ -28,7 +28,7 @@ export const fetchAllTransactions = () => dispatch => (
 export const createTransaction = transaction => dispatch => (
     TransactionAPIUtil.createTransaction(transaction).then(
         transaction => dispatch(receiveTransaction(transaction)),
-        tranErrors => dispatch(receiveTransactionErrors(tranErrors.responseJSON))
+        transactionErrors => dispatch(receiveTransactionErrors(transactionErrors.responseJSON))
     )
 )
 

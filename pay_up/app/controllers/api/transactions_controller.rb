@@ -3,14 +3,24 @@ class Api::TransactionsController < ApplicationController
     def create
         
         @transaction = Transaction.new(trans_params)
-        if @transaction.save
-            @payer = User.find_by(id: params[:transaction][:payer_id])
-            @recipient = User.find_by(id: params[:transaction][:recipient_id])
-            if @payer.balance > @transaction.amount && @payer != @recipient
+        # if @transaction.save
+        #     @payer = User.find_by(id: params[:transaction][:payer_id])
+        #     @recipient = User.find_by(id: params[:transaction][:recipient_id])
+        #     if @payer.balance > @transaction.amount && @payer != @recipient
+        #         @payer.payer_change(@transaction.amount)
+        #         @recipient.recipient_change(@transaction.amount)
+        #     else
+        #         render json: ['Invalid transaction! Try again.'], status: 418
+        #     end
+        # end
+        @payer = User.find_by(id: params[:transaction][:payer_id])
+        @recipient = User.find_by(id: params[:transaction][:recipient_id])
+        if @payer.balance < @transaction.amount || @payer == @recipient
+            render json: ['Invalid transaction! Try again.'], status: 418
+        else
+            if @transaction.save
                 @payer.payer_change(@transaction.amount)
                 @recipient.recipient_change(@transaction.amount)
-            else
-                render json: ['Invalid transaction! Try again.'], status: 418
             end
         end
         render '/api/transactions/show'

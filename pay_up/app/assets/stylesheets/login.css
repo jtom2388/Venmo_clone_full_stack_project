@@ -1,6 +1,7 @@
 .form {
     display: flex;
     justify-content: center;
+    /* background-color: #3D95CE; */
 }
 
 form {
@@ -52,5 +53,38 @@ form {
 
 .error-text {
     color: red;
+    font-weight: bold;
+}
+
+.login-submit {
+    background-color: #3D95CE;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.demo-button {
+    background-color: #3D95CE;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.signup-submit {
+    background-color: #3D95CE;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
     font-weight: bold;
 }

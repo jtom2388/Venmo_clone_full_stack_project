@@ -66,13 +66,32 @@ class LoginForm extends React.Component {
               </label>
               <br/>
               <input className='login-submit' type="submit" onClick={this.handleSubmit}/>
-              <button onClick={this.handleDemo}>Demo User</button>
+              {/* <br/> */}
+              <button className='demo-button' onClick={this.handleDemo}>Demo User</button>
           </fieldset>
           <p>New to PayUp?
             <Link to="/signup">Create an account now!</Link>
           </p>
         </form>
         </div>
+        <div className='icons-container'>
+            <div className='icons'>
+                <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
+                    <i className="fab fa-github-alt"></i>
+                </a>
+            </div>
+            <div className='icons'>
+                <a href="https://angel.co/u/jordan-philip-tom">
+                    <i className="fab fa-angellist"></i>
+                </a>
+            </div>
+            <div className='icons'>
+                <a href="https://www.linkedin.com/in/jordanphiliptom/">
+                    <i className="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+            <br/>
       </div>
     )
   }

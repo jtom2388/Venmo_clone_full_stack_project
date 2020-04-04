@@ -54,13 +54,30 @@ class SignupForm extends React.Component {
               <input className='auth-form-input' onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
             </label>
         <br/>
-            <input type="submit" value={this.props.formtype}/>   
+            <input className='signup-submit' type="submit" value={this.props.formtype}/>   
           </fieldset>
         <p>Already have an account?
           <Link to="/login">Log in now!</Link>
         </p>
         </form>
         </div>
+        <div className='icons-container'>
+            <div className='icons'>
+                <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
+                    <i className="fab fa-github-alt"></i>
+                </a>
+            </div>
+            <div className='icons'>
+                <a href="https://angel.co/u/jordan-philip-tom">
+                    <i className="fab fa-angellist"></i>
+                </a>
+            </div>
+            <div className='icons'>
+                <a href="https://www.linkedin.com/in/jordanphiliptom/">
+                    <i className="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>  
       </div>
     )
   }

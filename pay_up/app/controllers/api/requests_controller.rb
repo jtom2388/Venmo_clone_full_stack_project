@@ -3,11 +3,12 @@ class Api::RequestsController < ApplicationController
     def create
         
         @request = Request.new(request_params)
-        if @request.save
-            @requestor = User.find_by(id: params[:request][:requestor_id])
-            @requestee = User.find_by(id: params[:request][:requestee_id])
-            @requestor.requestor_change(@request.amount)
-            @requestee.requestee_change(@request.amount)
+        @requestor = User.find_by(id: params[:request][:requestor_id])
+        @requestee = User.find_by(id: params[:request][:requestee_id])
+        if @requestee.balance > @request.amount && @requestor != @requestee
+            if @request.save
+
+            end
         end
         render '/api/transactions/show'
     end

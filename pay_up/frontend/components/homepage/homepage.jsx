@@ -47,8 +47,8 @@ class Homepage extends React.Component{
                 <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
                 <div>
                     <UserIndexContainer hideUsers={this.state.hideUsers} />
-                    <TransactionIndexContainer />
                     <RequestIndexContainer />
+                    <TransactionIndexContainer />
                 </div>
             </div>
         )

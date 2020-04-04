@@ -12,7 +12,8 @@
 
 
 .logout-button{
-    background-color: lightgreen;
+    background-color: #3D95CE;
+    color: #fff;
     font-weight: bold;
     padding: 10px;
     padding-left: 50px;
@@ -26,7 +27,7 @@
 }
 
 .logout-button:hover{
-    background-color: green;
+    background-color: blue;
     color: white;
 }
 
@@ -65,6 +66,8 @@
 
 .usernames-container{
     display: flex;
+    width: 40%;
+    margin: 0 auto;
 }
 
 .usernames{
@@ -133,8 +136,9 @@
 
 .collapsible{
     /* float: right; */
-    border-radius: 12px;
-    background-color: lightskyblue;
+    background-color: #3D95CE;
+    color: #fff;
+    font-weight: bold;
 }
 
 .collapsible:hover{
@@ -150,7 +154,7 @@
 
 .currentUser-info{
     border: gray 1px solid;
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
 }
 

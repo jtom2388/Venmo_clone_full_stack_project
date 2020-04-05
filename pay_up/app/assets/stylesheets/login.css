@@ -12,17 +12,12 @@
     text-align: left;
 } */
 
-.login-title {
+.login-title, .signup-title {
     text-align: center;
     font-size: 32px;
     line-height: 40px;
     font-weight: 400;
     margin: 28px 0;
-}
-
-.signup-title {
-    text-align: center;
-    font-size: 30px;
 }
 
 .auth-form-input {
@@ -51,7 +46,7 @@
     width: 20rem; */
 }
 
-.login-form {
+.login-form, .signup-form {
     background: #f7f7f7;
     border-radius: 4px;
     border: 1px solid #ededed;
@@ -68,7 +63,7 @@
     font-weight: bold;
 }
 
-.login-submit {
+.login-submit, .signup-submit {
     font-size: 15px;
     padding: 12px 20px;
     font-weight: 600;
@@ -80,6 +75,11 @@
     color: #fff;
     box-shadow: 0 1px 2px rgba(38,38,38,.15);
     border: none;
+}
+
+.signup-submit {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .demo-button {
@@ -97,24 +97,13 @@
     margin-right: 1rem;
 }
 
-.signup-submit {
-    background-color: #3D95CE;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.login-main .content-container {
+.login-main .content-container, .signup-main .content-container {
     flex-direction: column;
     margin: none;
     width: 100%;
 }
 
-.login-username, .login-password {
+.login-username, .login-password, .signup-username, .signup-password {
     font-size: 12px;
     line-height: 16px;
     font-weight: 600;

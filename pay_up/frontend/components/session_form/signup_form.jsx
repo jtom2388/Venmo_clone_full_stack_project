@@ -35,32 +35,61 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
+      <div className='signup-main'>
         {/* <Link to="/">
           <img className='payup-logo' src={window.pay_up} alt=""/>
         </Link> */}
-        <h1 className='signup-title'>Join PayUp Now</h1>
-        <br/>
-        <div className='form'>
-        <form onSubmit={this.handleSubmit}>
-        {this.props.errors.map( (error, i) => (
-            <li className='error-text' key={`${i}`}>{error}</li>
-        ))}
-          <fieldset className='inputs'>
-            <label>Username:
-              <input className='auth-form-input' onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
-            </label>
-            <label>Password:
-              <input className='auth-form-input' onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
-            </label>
-        <br/>
-            <input className='signup-submit' type="submit" value={this.props.formtype}/>   
-          </fieldset>
-        <p>Already have an account?
-          <Link to="/login">Log in now!</Link>
-        </p>
-        </form>
+        <div className='header'>
+            <div className='header-container'>
+                <div className='header-logo'>
+                    <Link className='header-logo-a' to="/">
+                        {/* <img className='payup-logo' src={window.pay_up} alt=""/> */}
+                        PayUp
+                    </Link>
+                </div>
+                <div className='login'>
+                    <Link to="/login">
+                        {/* <button className='login-button'>Log In</button> */}
+                        <div className='login-div'>Log In</div>
+                    </Link>
+                </div>
+            </div>
         </div>
+        <div className='content'>
+          <div className='content-container'>
+            <h1 className='signup-title'>Join PayUp Now</h1>
+            <br/>
+            <div className='form'>
+            <form className='signup-form' onSubmit={this.handleSubmit}>
+            {this.props.errors.map( (error, i) => (
+                <li className='error-text' key={`${i}`}>{error}</li>
+            ))}
+              <fieldset className='inputs'>
+                <label className='signup-username'>Username:
+                  <input className='auth-form-input' onChange={this.updateUsername} type="text" name="username" value={this.state.username}/>
+                </label>
+                <label className='signup-password'>Password:
+                  <input className='auth-form-input' onChange={this.handleInput('password')} type="password" name="password" value={this.state.password}/>
+                </label>
+            <p className='message'>
+              <span>
+                Already have an account?
+              </span>
+              <Link to="/login">Log in now!</Link>
+            </p>
+            <br/>
+              {/* <div className='signup-button'> */}
+                <input className='signup-submit' type="submit" value={this.props.formtype}/>   
+              {/* </div> */}
+              </fieldset>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='footer'>
         <div className='icons-container'>
             <div className='icons'>
                 <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
@@ -77,8 +106,9 @@ class SignupForm extends React.Component {
                     <i className="fab fa-linkedin-in"></i>
                 </a>
             </div>
-        </div>  
+        </div> 
       </div>
+      </>
     )
   }
 }

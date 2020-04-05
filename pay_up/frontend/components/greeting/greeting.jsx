@@ -13,29 +13,42 @@ class Greeting extends React.Component{
 
     render() {
         return(
+            <>
             <div className='main'>
                 <div className='header'>
-                    <Link to="/">
-                        <img className='payup-logo' src={window.pay_up} alt=""/>
-                    </Link>
-                    <div className='login'>
-                        <Link to="/login">
-                            <button className='login-button'>Log In</button>
-                        </Link>
+                    <div className='header-container'>
+                        <div className='header-logo'>
+                            <Link className='header-logo-a' to="/">
+                                {/* <img className='payup-logo' src={window.pay_up} alt=""/> */}
+                                PayUp
+                            </Link>
+                        </div>
+                        <div className='login'>
+                            <Link to="/login">
+                                {/* <button className='login-button'>Log In</button> */}
+                                <div className='login-div'>Log In</div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
                 <div className='content'>
-                    <div className='image'>
-                        <img className='content-image' src={window.content} alt=""/>
-                    </div>
-                    <div className='signup'>
-                        <p className='welcome-message'>Pay on the go or from any available computer. Join PayUp now!</p>
-                        <Link to="/signup">
-                            <button className='signup-button'>Sign Up</button>
-                        </Link>
+                    <div className='content-container'>
+                        <div className='content-image-container'>
+                            <img className='content-image' src={window.content} alt=""/>
+                        </div>
+                        <div className='signup'>
+                            <p className='welcome-message'>Pay on the go or from any available computer. Join PayUp now!</p>
+                            <Link className='signup-a' to="/signup">
+                                <button className='signup-button'>Sign Up Now</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
+                <br/>
+            </div>
+            
+            <div className='footer'>
                 <div className='icons-container'>
                     <div className='icons'>
                         <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
@@ -53,8 +66,8 @@ class Greeting extends React.Component{
                         </a>
                     </div>
                 </div>
-                <br/>
             </div>
+            </>
         )
     }
 };

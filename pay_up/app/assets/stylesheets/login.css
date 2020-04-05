@@ -2,18 +2,22 @@
     display: flex;
     justify-content: center;
     /* background-color: #3D95CE; */
+    width: 100%;
 }
 
-form {
+/* form {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-}
+} */
 
 .login-title {
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 28px 0;
 }
 
 .signup-title {
@@ -34,17 +38,25 @@ form {
     line-height: 24px;
     min-width: 0;
     padding: 12px 8px 12px 4px;
-    width: 90%;
+    width: 100%;
 }
 
 .inputs {
     /* background-color: lightgray; */
-    padding-left: 15px;
+    /* padding-left: 15px;
     outline: none;
     border-radius: 5px;
     background-color: rgb(236, 233, 233);
     padding: 10px;
-    width: 20rem;
+    width: 20rem; */
+}
+
+.login-form {
+    background: #f7f7f7;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    padding: 28px;
+    flex: 0 1 500px;
 }
 
 .payup-logo {
@@ -57,25 +69,32 @@ form {
 }
 
 .login-submit {
-    background-color: #3D95CE;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 15px;
+    padding: 12px 20px;
+    font-weight: 600;
     border-radius: 4px;
-    font-weight: bold;
+    line-height: 1.5;
+    font-family: helvetica neue;
+    box-sizing: border-box;
+    background: #3d95ce;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(38,38,38,.15);
+    border: none;
 }
 
 .demo-button {
-    background-color: #3D95CE;
-    color: #fff;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 15px;
+    padding: 12px 20px;
+    font-weight: 600;
     border-radius: 4px;
-    font-weight: bold;
+    line-height: 1.5;
+    font-family: helvetica neue;
+    box-sizing: border-box;
+    background: #3d95ce;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(38,38,38,.15);
+    border: none;
+    margin-right: 1rem;
 }
 
 .signup-submit {
@@ -87,4 +106,57 @@ form {
     padding-bottom: 10px;
     border-radius: 4px;
     font-weight: bold;
+}
+
+.login-main .content-container {
+    flex-direction: column;
+    margin: none;
+    width: 100%;
+}
+
+.login-username, .login-password {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #7f7f7f;
+    text-transform: uppercase;
+    display: block;
+    padding-left: 4px;
+    margin-bottom: 1rem;
+}
+
+.login-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.message {
+    margin: 0.5rem 0;
+}
+
+.message span {
+    margin-right: 1rem;
+}
+
+.message a {
+    text-decoration: none;
+    color: #3d95ce;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icons-container {
+    width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.icons {
+    width: 4rem;
 }

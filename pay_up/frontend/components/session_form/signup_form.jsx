@@ -36,9 +36,9 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/">
+        {/* <Link to="/">
           <img className='payup-logo' src={window.pay_up} alt=""/>
-        </Link>
+        </Link> */}
         <h1 className='signup-title'>Join PayUp Now</h1>
         <br/>
         <div className='form'>

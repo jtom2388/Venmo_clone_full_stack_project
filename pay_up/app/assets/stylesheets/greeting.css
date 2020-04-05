@@ -5,12 +5,41 @@
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+    line-height: 40px;
+    padding: 19px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
 }
 
-.payup-logo {
+.header-container {
+    width: 900px;
+    justify-content: space-between;
+    display: flex;
+}
+
+/* .payup-logo {
     height: 100px;
+} */
+
+.header-logo {
+    float: left;
+    width: 100px;
+    height: 40px;
+}
+
+.header-logo a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: Helvetica;
+    color: #3d95ce;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .login-button {
@@ -33,34 +62,63 @@
     color: #fff;
     text-decoration: none;
 }
+
+.login-div {
+    color: #3d95ce;
+    cursor: pointer;
+    font-weight: 500;
+    padding-right: 28px;
+}
+
+.login-div:hover {
+    color: #3d94ce8c;
+}
     
 .content {
     display: flex;
+    padding: 25px 2rem 0 2rem;
     justify-content: center;
-    text-align: center;
-    background-color: #3D95CE;
-    height: 600px;
+    box-sizing: border-box;
+    /* text-align: center; */
+    /* background-color: #3D95CE; */
+    height: 675px;
+    width: 100%;
+}
+
+.content-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
 }
     
+.content-image-container {
+    width: 556px;
+    height: 650px;
+}
+
 .content-image {
-    margin-top: 25%;
-    width: 75%;
-    height: 50%;
+    width: 556px;
+    height: 650px;
 }
     
 .image {
     width: 30%;
 }
 
+.signup-a {
+    margin: 1rem;
+    padding: 1rem;
+}
+
 .signup {
+    padding: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 30%;
+    width: 450px;
     font-size: 50px;
-    letter-spacing: -.75px;
-    font-weight: 300;
-    color: #fff;
+    font-weight: lighter;
 }
 
 .signup-button {
@@ -71,19 +129,14 @@
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 20px;
-    color: #3D95CE;
-    background-color: white;
+    background-color: #3D95CE;
+    color: white;
+    font-weight: bold;
 }
 
 .signup-button:hover {
     opacity: .5;
     cursor: pointer;
-}
-
-.icons-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
 }
 
 .fab {
@@ -97,4 +150,28 @@
     cursor: pointer;
     transition: 0.5s;
     text-shadow: 1px 1px 10px #3D95CE;
+}
+
+.welcome-message {
+    color: black;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: "HelveticaNeue-Light"
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icons-container {
+    width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.icons {
+    width: 4rem;
 }

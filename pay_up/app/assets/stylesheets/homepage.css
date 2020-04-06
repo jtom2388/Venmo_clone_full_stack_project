@@ -107,10 +107,11 @@
     border-radius: 12px;
     padding-left: 10px;
     padding-right: 10px;
+    cursor: pointer;
 }
 
 .pay-button:hover{
-    background-color: green;
+    background-color: blue;
     color: white;
     font-weight: bold;
 }
@@ -145,6 +146,7 @@
     background-color: #3D95CE;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .collapsible:hover{
@@ -178,6 +180,7 @@
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;
+    padding: 10px;
 }
 
 .homepage{

@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
         amount: '',
         body: '',
         payer_id: '',
-        recipient_id: ''
+        recipient_id: '',
+        created_at: '',
     },
     username: state.ui.modalUserReducer.username,
     currentUserId: state.session.id,

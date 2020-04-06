@@ -63,7 +63,7 @@ class SignupForm extends React.Component {
             <div className='form'>
             <form className='signup-form' onSubmit={this.handleSubmit}>
             {this.props.errors.map( (error, i) => (
-                <li className='error-text' key={`${i}`}>{error}</li>
+                <div className='error-text' key={`${i}`}>{error}</div>
             ))}
               <fieldset className='inputs'>
                 <label className='signup-username'>Username:

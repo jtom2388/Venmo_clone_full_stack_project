@@ -16,8 +16,8 @@ class TransactionIndex extends React.Component{
             return <TransactionIndexItem transaction={transaction} key={i} />
         })
         return (
-            <div>
-                <ul>{transactions}</ul>
+            <div className='transaction-container'>
+                {transactions}
             </div>
         )
     }

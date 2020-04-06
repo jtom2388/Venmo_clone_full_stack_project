@@ -10,30 +10,16 @@
     color: green;
 }
 
-
-.logout-button{
-    background-color: #3D95CE;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-radius: 12px;
-    right: 10%;
-    top: 5%;
-    position: absolute;
-    flex-direction: row;
-    margin-right: 80px;
-}
-
-.logout-button:hover{
-    background-color: blue;
-    color: white;
+.transaction-container {
+    padding: 25px 2rem 0 2rem;
+    width: 100%;
+    /* margin: 0 auto; */
 }
 
 .transaction{
     border: lightgray solid 1px;
     width: 40%;
+    background-color: white;
     margin: 0 auto;
 }
 
@@ -64,10 +50,27 @@
     font-size: 20px;
 }
 
+.top-level-container{
+    /* width: 75%; */
+    /* margin: 0 auto; */
+    overflow: hidden;
+    max-height: 10000px;
+    height: auto;
+    transition: all 300ms ease-in-out;
+    background-color: white;
+    width: 236px;
+}
+
+.hide-users {
+    transition: all 300ms ease-in-out;
+    max-height: 0;
+}
+
 .usernames-container{
     display: flex;
-    width: 40%;
+    width: 236px;
     margin: 0 auto;
+    padding: 25px 2rem 0 2rem;
 }
 
 .usernames{
@@ -98,7 +101,8 @@
 }
 
 .pay-button{
-    background-color: lightgreen;
+    background: #3d95ce;
+    color: white;
     border-radius: 12px;
     padding-left: 10px;
     padding-right: 10px;
@@ -132,6 +136,7 @@
 .show-user-button{
     display: flex;
     float: right;
+    cursor: pointer;
 }
 
 .collapsible{
@@ -147,42 +152,102 @@
     color: white;
 }
 
-.usernames-info{
-    /* display: none;
-    overflow: hidden; */
-}
-
-.currentUser-info{
-    border: gray 1px solid;
+.float-right-content{
+    float: right;
+    width: 300px;
+    height: 490px;
+    /* width: 30%; */
+    padding: 25px 2rem 0 2rem;
+    /* border: gray 1px solid;
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 
-.welcome{
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
+.current-user-container {
+    background: white;
+    border-bottom: 1px solid #e9e9e9;
+    border-top: 1px solid #a6a6a6;
+}
+
+.user-photo {
+    float: left;
+}
+
+.current-user{
+    font-weight: bold;
+    color: #057FC6;
+    text-decoration: none;
 }
 
 .homepage{
-    background-color: rgb(231, 231, 231);
+    background-color: #EEF0F4;
+}
+
+.homepage .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3d95ce;
+    border-bottom: 1px solid #ededed;
+    line-height: 40px;
+    padding: 19px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.homepage .header-container {
+    width: 900px;
+    justify-content: space-between;
+    display: flex;  
+}
+
+.homepage .header-logo {
+    float: left;
+    width: 100px;
+    height: 40px;
+}
+
+.homepage .header-logo-a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: Helvetica;
+    color: #fff;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logout-button{
+    color: #3D95CE;
+    background-color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 12px;
+    right: 10%;
+    top: 5%;
+    position: absolute;
+    flex-direction: row;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+.logout-button:hover{
+    background-color: blue;
+    color: white;
+}
+
+.balance-container {
+    background-color: white;
+    padding: 10px;
 }
 
 .current-user-balance{
-    padding: 10px;
-    color: green;
+    font-size: 16px;
     font-weight: bold;
 }
 
-.top-level-container{
-    width: 75%;
-    margin: 0 auto;
-    overflow: hidden;
-    max-height: 10000px;
-    height: auto;
-    transition: all 300ms ease-in-out;
-}
 
-.hide-users {
-    transition: all 300ms ease-in-out;
-    max-height: 0;
-}
+

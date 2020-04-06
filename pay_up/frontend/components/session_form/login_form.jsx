@@ -72,7 +72,7 @@ class LoginForm extends React.Component {
               <div className='form'>
                 <form className='login-form' onSubmit={this.handleSubmit}>
                 {this.props.errors.map( (error, i) => (
-                    <li className='error-text' key={`${i}`}>{error}</li>
+                    <div className='error-text' key={`${i}`}>{error}</div>
                 ))}
                   <fieldset className='inputs'>
                       <label className='login-username'>Username:

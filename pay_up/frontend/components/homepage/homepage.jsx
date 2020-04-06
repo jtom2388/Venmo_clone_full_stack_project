@@ -30,24 +30,44 @@ class Homepage extends React.Component{
 
         return (
             <div className='homepage'>
-                <Link to="/home">
-                    <img className='payup-logo' src={window.pay_up} alt=""/>
-                </Link>
-                <div className='currentUser-info'>
-                    <div className='welcome'>
-                        Welcome {this.props.currentUser.username}
+                <div className='header'>
+                    <div className='header-container'>
+                        <div className='header-logo'>
+                            <Link className='header-logo-a' to="/home">
+                                PayUp
+                            </Link>
+                        </div>
+                    </div>
+                    <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
+                </div>
+                <div className='float-right-content'>
+                    <div className='current-user-container'>
+                        <div className='user-photo'>
+
+                        </div>
+                        <div className='current-user'>
+                            {this.props.currentUser.username}
+                        </div>
+                    </div>
+                    <div className='balance-container'>
+                        <div className='current-user-balance'>
+                            Balance: ${this.props.currentUser.balance}
+                        </div>
                     </div>
                     <div className='show-user-button'>
                         <button onClick={this.toggleUsers} className='collapsible'>Show Users</button>
                     </div>
-                    <div className='current-user-balance'>
-                        balance: ${this.props.currentUser.balance}
+                    <br/>
+                    <div>
+                        <UserIndexContainer hideUsers={this.state.hideUsers} />
                     </div>
                 </div>
-                <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
+                
                 <div>
-                    <UserIndexContainer hideUsers={this.state.hideUsers} />
                     <RequestIndexContainer />
+                </div>
+
+                <div>
                     <TransactionIndexContainer />
                 </div>
             </div>

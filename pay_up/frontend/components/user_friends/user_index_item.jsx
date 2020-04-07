@@ -21,12 +21,15 @@ class UserIndexItem extends React.Component{
         return(
             // <div className='usernames-container'>
                 <div className='usernames'>
-                    <div className='name'>
-                       {this.props.user.username}
+                    <div className='usernames-container'>
+                        <div className='name'>
+                        {this.props.user.username}
+                        </div>
+                        <div className='pay'>
+                            <button className='pay-button' onClick={(() => this.props.openModal('PAY', this.props.user.username))}>Pay</button>
+                        </div>
                     </div>
-                    <div className='pay'>
-                        <button className='pay-button' onClick={(() => this.props.openModal('PAY', this.props.user.username))}>Pay</button>
-                    </div>
+
                     {/* <div className='request'>
                         <button className='request-button' onClick={(() => this.props.openModal('REQUEST', this.props.user.username))}>Request</button>
                     </div> */}

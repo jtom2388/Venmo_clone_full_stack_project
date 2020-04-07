@@ -37,39 +37,50 @@ class Homepage extends React.Component{
                                 PayUp
                             </Link>
                         </div>
+                        <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
                     </div>
-                    <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
                 </div>
-                <div className='float-right-content'>
-                    <div className='current-user-container'>
-                        <div className='user-photo'>
 
+                <div className='homepage-main'>
+                    <div className='homepage-main-container'>
+                        <div className="homepage-main-left">
+                            <TransactionIndexContainer />
                         </div>
-                        <div className='current-user'>
-                            {this.props.currentUser.username}
+                        <div className="homepage-main-right">
+                            <div className='current-user-container'>
+                                <div className='user-photo'>
+
+                                </div>
+                                <div className='current-user'>
+                                    {this.props.currentUser.username}
+                                </div>
+                            </div>
+                            <div className='balance-container'>
+                                <div className='current-user-balance'>
+                                    Balance: ${this.props.currentUser.balance}
+                                </div>
+                            </div>
+                            <div className='show-user-button'>
+                                <button onClick={this.toggleUsers} className='collapsible'>Show Users</button>
+                            </div>
+                            <br/>
+                            <div>
+                                <UserIndexContainer hideUsers={this.state.hideUsers} />
+                            </div>
                         </div>
-                    </div>
-                    <div className='balance-container'>
-                        <div className='current-user-balance'>
-                            Balance: ${this.props.currentUser.balance}
-                        </div>
-                    </div>
-                    <div className='show-user-button'>
-                        <button onClick={this.toggleUsers} className='collapsible'>Show Users</button>
-                    </div>
-                    <br/>
-                    <div>
-                        <UserIndexContainer hideUsers={this.state.hideUsers} />
+                        {/* <div className='float-right-content'>
+                            
+                        </div> */}
                     </div>
                 </div>
                 
-                <div>
+                {/* <div>
                     <RequestIndexContainer />
-                </div>
+                </div> */}
 
-                <div>
+                {/* <div>
                     <TransactionIndexContainer />
-                </div>
+                </div> */}
             </div>
         )
         

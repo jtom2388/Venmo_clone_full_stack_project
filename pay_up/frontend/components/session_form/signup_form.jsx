@@ -79,9 +79,9 @@ class SignupForm extends React.Component {
               <Link to="/login">Log in now!</Link>
             </p>
             <br/>
-              {/* <div className='signup-button'> */}
+              <div className='signup-button-auth'>
                 <input className='signup-submit' type="submit" value={this.props.formtype}/>   
-              {/* </div> */}
+              </div>
               </fieldset>
             </form>
             </div>

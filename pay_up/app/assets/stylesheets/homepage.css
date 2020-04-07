@@ -12,31 +12,51 @@
 
 .transaction-container {
     padding: 25px 2rem 0 2rem;
-    width: 100%;
+    width: 60%;
     /* margin: 0 auto; */
 }
 
 .transaction{
     border: lightgray solid 1px;
-    width: 40%;
+    position: relative;
+    width: 500px;
     background-color: white;
     margin: 0 auto;
+    display: flex;
 }
 
-.transaction-section{
+.transaction-div{
     display: flex;
-    flex-direction: column;
-    padding: 1.25rem;
+    width: 100%;
+}
+
+.transaction-left {
+    width: 33%;
+}
+
+.transaction-middle {
+    width: 33%;
+}
+
+.transaction-right {
+    width: 33%;
 }
 
 .transaction-info{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    /* justify-content: space-between; */
 }
 
 .transaction-users{
     font-weight: bold;
     color: rgb(100, 100, 100);
+}
+
+.transaction-time {
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6A757F;
 }
 
 .transaction-amount{
@@ -46,8 +66,9 @@
 }
 
 .transaction-message{
-    margin-top: 20px;
-    font-size: 20px;
+    /* margin-top: 20px; */
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .top-level-container{
@@ -155,15 +176,18 @@
     color: white;
 }
 
-.float-right-content{
-    float: right;
-    width: 300px;
+.homepage-main-left {
+    width: 70%;
+    
+}
+
+.homepage-main-right{
+
+    width: 30%;
     height: 490px;
     /* width: 30%; */
     padding: 25px 2rem 0 2rem;
-    /* border: gray 1px solid;
-    width: 60%;
-    margin: 0 auto; */
+    /* margin: 0 auto; */
 }
 
 .current-user-container {
@@ -202,7 +226,7 @@
 
 .homepage .header-container {
     width: 900px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     display: flex;  
 }
 
@@ -229,18 +253,32 @@
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    border-radius: 12px;
-    right: 10%;
-    top: 5%;
-    position: absolute;
-    flex-direction: row;
-    margin-right: 80px;
+    border-radius: 5px;
+    border: 1px solid #fff;
     cursor: pointer;
 }
 
 .logout-button:hover{
-    background-color: blue;
-    color: white;
+    background-color: #ededed;
+    color: #3D95CE;
+    border: 1px solid #fff;
+}
+
+.homepage-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 40px;
+    padding: 19px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.homepage-main-container {
+    width: 900px;
+    /* justify-content: space-between; */
+    display: flex;  
 }
 
 .balance-container {

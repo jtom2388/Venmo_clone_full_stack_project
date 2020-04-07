@@ -69,7 +69,29 @@
     font-weight: 600;
     border-radius: 4px;
     line-height: 1.5;
-    font-family: helvetica neue;
+    font-family: helvetica;
+    box-sizing: border-box;
+    background: #3d95ce;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(38,38,38,.15);
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.signup-button-auth {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.signup-submit {
+    font-size: 15px;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    line-height: 1.5;
+    font-family: helvetica;
     box-sizing: border-box;
     background: #3d95ce;
     color: #fff;
@@ -78,18 +100,13 @@
     cursor: pointer;
 }
 
-.signup-submit {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 .demo-button {
     font-size: 15px;
     padding: 12px 20px;
     font-weight: 600;
     border-radius: 4px;
     line-height: 1.5;
-    font-family: helvetica neue;
+    font-family: helvetica;
     box-sizing: border-box;
     background: #3d95ce;
     color: #fff;
@@ -123,7 +140,8 @@
 }
 
 .message {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0 4px;
+    font-size: 14px;
 }
 
 .message span {

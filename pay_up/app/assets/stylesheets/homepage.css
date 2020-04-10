@@ -2,14 +2,6 @@
     box-sizing: border-box;
 }
 
-.payup-logo{
-    left: 50%;
-}
-
-.balance{
-    color: green;
-}
-
 .transaction-container {
     padding: 25px 2rem 0 2rem;
     width: 60%;
@@ -193,16 +185,12 @@
 
 .homepage-main-left {
     width: 70%;
-    
 }
 
 .homepage-main-right{
-
     width: 30%;
     height: 490px;
-    /* width: 30%; */
     padding: 25px 2rem 0 2rem;
-    /* margin: 0 auto; */
 }
 
 .current-user-container {
@@ -215,7 +203,7 @@
     float: left;
 }
 
-.current-user{
+.current-user-name{
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;

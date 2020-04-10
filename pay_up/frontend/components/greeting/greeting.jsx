@@ -38,7 +38,7 @@ class Greeting extends React.Component{
                             <img className='content-image' src={window.content} alt=""/>
                         </div>
                         <div className='signup'>
-                            <p className='welcome-message'>Pay on the go or from any available computer. Join PayUp now!</p>
+                            <p className='welcome-message'>Pay on the go or from any computer. Join PayUp now!</p>
                             <Link className='signup-a' to="/signup">
                                 <button className='signup-button'>Sign Up Now</button>
                             </Link>

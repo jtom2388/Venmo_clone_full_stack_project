@@ -7,6 +7,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import {Link} from 'react-router-dom'
 import Greeting from './greeting/greeting';
 import HomepageContainer from './homepage/homepage_container';
+import ProfileContainer from './profile/profile_container';
 import Modal from './modal/modal';
 import CreateTransactionContainer from './transactions/create_transaction_container';
 
@@ -18,6 +19,7 @@ const App = () => (
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <ProtectedRoute exact path="/home" component={HomepageContainer} />
+    <ProtectedRoute exact path="/profile" component={ProfileContainer} />
   </div>
 );
 

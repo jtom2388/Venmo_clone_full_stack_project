@@ -52,7 +52,8 @@ class Homepage extends React.Component{
 
                                 </div>
                                 <div className='current-user'>
-                                    {this.props.currentUser.username}
+                                    <Link className='current-user-name' to="/profile">{this.props.currentUser.username}</Link>
+                                    {/* {this.props.currentUser.username} */}
                                 </div>
                             </div>
                             <div className='balance-container'>
@@ -68,9 +69,6 @@ class Homepage extends React.Component{
                                 <UserIndexContainer hideUsers={this.state.hideUsers} />
                             </div>
                         </div>
-                        {/* <div className='float-right-content'>
-                            
-                        </div> */}
                     </div>
                 </div>
                 
@@ -78,9 +76,6 @@ class Homepage extends React.Component{
                     <RequestIndexContainer />
                 </div> */}
 
-                {/* <div>
-                    <TransactionIndexContainer />
-                </div> */}
             </div>
         )
         

@@ -27,7 +27,8 @@ class Homepage extends React.Component{
     
 
     render() {
-
+        console.log(this.props, "homepage")
+        console.log(this.props.currentUser.photoURL)
         return (
             <div className='homepage'>
                 <div className='header'>
@@ -48,8 +49,8 @@ class Homepage extends React.Component{
                         </div>
                         <div className="homepage-main-right">
                             <div className='current-user-container'>
-                                <div className='user-photo'>
-
+                                <div className='user-photo-container'>
+                                    <img className='user-photo' src={this.props.currentUser.photoURL} alt=""/>
                                 </div>
                                 <div className='current-user'>
                                     <Link className='current-user-name' to="/profile">{this.props.currentUser.username}</Link>

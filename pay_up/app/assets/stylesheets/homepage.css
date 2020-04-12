@@ -194,6 +194,8 @@
 }
 
 .current-user-container {
+    display: flex;
+    padding: 5px;
     background: white;
     border-bottom: 1px solid #e9e9e9;
     border-top: 1px solid #a6a6a6;
@@ -208,6 +210,7 @@
     color: #057FC6;
     text-decoration: none;
     padding: 10px;
+    align-items: center;
 }
 
 .homepage{
@@ -294,5 +297,12 @@
     font-weight: bold;
 }
 
+.user-photo-container {
+    width: 50%;
+}
 
+.user-photo {
+    width: 70%;
+    height: auto;
+}
 

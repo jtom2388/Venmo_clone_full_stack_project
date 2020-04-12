@@ -45,6 +45,8 @@ class User < ApplicationRecord
         through: :friendships,
         source: :friend
 
+    has_one_attached :profile_photo
+
     def self.find_by_credentials(username, password)
         @user = User.find_by(username: username)
         @user && @user.is_password?(password) ? @user : nil

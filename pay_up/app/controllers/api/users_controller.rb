@@ -22,10 +22,26 @@ class Api::UsersController < ApplicationController
       @recipient = User.find_by(username: params[:user][:transaction][:recipient])
       render :show
     end
+
+    def update
+      @user = User.find_by(id: params[:id])
+      # @user = {
+      #   id: params[:user][:id],
+      #   username: params[:user][:username],
+      #   balance: params[:user][:balance],
+      #   profile_photo: params[:user][:profile_photo]
+      # }
+      # @user["profile_photo"] = params[:user][:profile_photo] 
+      if @user.update(user_params)
+        render '/api/users/show'
+      else
+        render json: ['Photo upload failed']
+      end
+    end
     
     private
 
     def user_params
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:id, :username, :password, :balance, :profile_photo)
     end
 end

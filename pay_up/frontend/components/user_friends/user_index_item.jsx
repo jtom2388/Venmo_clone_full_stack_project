@@ -22,9 +22,6 @@ class UserIndexItem extends React.Component{
             // <div className='usernames-container'>
                 <div className='usernames'>
                     <div className='usernames-container'>
-                        {/* <div className='photo'>
-                        {this.props.user.photoURL}
-                        </div> */}
                         <div className='name'>
                         {this.props.user.username}
                         </div>

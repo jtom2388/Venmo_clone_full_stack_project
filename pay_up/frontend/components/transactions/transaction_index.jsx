@@ -17,7 +17,7 @@ class TransactionIndex extends React.Component{
         })
         return (
             <div className='transaction-container'>
-                {transactions}
+                {transactions.reverse()}
             </div>
         )
     }

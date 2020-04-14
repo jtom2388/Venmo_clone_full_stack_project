@@ -5,10 +5,20 @@ export const fetchAllUsers = () => {
     })
 }
 
+export const updateImage = formData => {
+    return $.ajax({
+        url: `/api/users/${formData.get('user[id]')}`,
+        method: 'PATCH',
+        data: formData,
+        contentType: false,
+        processData: false
+    })
+}
+
 export const updatePayer = username => {
     return $.ajax({
         url: `/api/users/${username}`,
-        method: 'GET',
+        method: 'PATCH',
         data: { user: username }
     })
 }

@@ -17,7 +17,7 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :session_token, :account_number, presence: true, uniqueness: true
     validates :password, length: { minimum: 6 }, allow_nil: true 
-    after_initialize :ensure_session_token
+    after_initialize :ensure_session_token, :add_default_profile_photo
     before_validation :generate_account_number
     attr_reader :password
 
@@ -86,5 +86,11 @@ class User < ApplicationRecord
     def recipient_change(amount)
         self.balance += amount
         self.save!
+    end
+
+    def add_default_profile_photo
+        unless self.profile_photo.attached?
+            self.profile_photo.attach(io: File.open(Rails.root.join("lib", "seeds", "Default-Profile-Picture.png")), filename: 'Default-Profile-Picture.png')
+        end
     end
 end

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TransactionIndexItem = props => {
-    console.log(props.transaction)
+
     const timeData = props.transaction.createdAt;
     const day = timeData.split("T")[0];
     const time = timeData.split("T")[1].split(".")[0];

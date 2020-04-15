@@ -91,6 +91,7 @@ class User < ApplicationRecord
     def add_default_profile_photo
         unless self.profile_photo.attached?
             self.profile_photo.attach(io: File.open(Rails.root.join("lib", "seeds", "Default-Profile-Picture.png")), filename: 'Default-Profile-Picture.png')
+            # self.profile_photo.attach(io: File.open(Rails.root.join("lib", "seeds", "blank-profile-picture-973461_1280.png")), filename: 'blank-profile-picture-973461_1280.png')
         end
     end
 end

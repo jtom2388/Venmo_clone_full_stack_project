@@ -104,8 +104,8 @@ class Homepage extends React.Component{
                                     </div>
                                     <div>
                                         <label className='photo-label'>
-
-                                            Add Photo
+                                            <p className='add-photo'>Add Photo</p>
+                                            
                                             <input className='photo-file' 
                                             onChange={this.handleFile}
                                             {...preview}

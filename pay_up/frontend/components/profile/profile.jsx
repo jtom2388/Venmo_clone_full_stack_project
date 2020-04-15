@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import UserIndexContainer from '../user_friends/user_index_container';
+import TransactionIndexContainer from '../transactions/transaction_index_container';
+
 
 class Profile extends React.Component{
 
@@ -41,7 +43,7 @@ class Profile extends React.Component{
                 <div className='profile-main'>
                     <div className='profile-main-container'>
                         <div className="profile-main-left">
-                            {/* <TransactionIndexContainer /> */}
+                            <TransactionIndexContainer />
                         </div>
                         <div className="profile-main-right">
                             <div className='profile-user-container'>

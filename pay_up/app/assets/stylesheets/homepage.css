@@ -95,33 +95,50 @@
 
 .usernames-container{
     display: flex;
-    width: 90%;
+    width: 100%;
     align-items: center;
     margin: 0 auto;
-    padding: 25px 2rem 0 2rem;
+    padding: 4%;
 }
 
 .usernames{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 80px auto 80px;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    width: 90%;
-    height: 100px;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    height: 90%;
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
-    margin: 0 auto;
-    /* flex-direction: row; */
 }
 
-/* .usernames > div {
-    padding: 3em;
-    flex-direction: row;
-} */
+.friends-image-container {
+    width: 50%;
+    padding-left: 7%;
+}
+
+.add-photo {
+    color: #057FC6;
+    position: relative;
+}
+
+.friends-image{
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.usernames-function{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
 
 .name{
     font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(100, 100, 100)
 }
 
 .pay{
@@ -137,7 +154,6 @@
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
-    margin-left: 20px;
 }
 
 .pay-button:hover{
@@ -189,7 +205,7 @@
 
 .homepage-main-right{
     width: 30%;
-    height: 490px;
+    height: auto;
     padding: 25px 2rem 0 2rem;
 }
 
@@ -199,10 +215,6 @@
     background: white;
     border-bottom: 1px solid #e9e9e9;
     border-top: 1px solid #a6a6a6;
-}
-
-.user-photo {
-    float: left;
 }
 
 .current-user-name{
@@ -313,7 +325,9 @@
 
 .current-user-wrapper {
     display: flex;
+ 
     flex-direction: column;
+    padding: 5%;
 }
 
 .photo-label {

@@ -21,7 +21,7 @@ class TransactionForm extends React.Component{
             body: this.state.body,
             payer_id: this.props.currentUserId,
             recipient_id: this.userId
-        }).then(user => this.props.fetchUser(user))
+        }).then(() => this.props.fetchUser(this.props.currentUserId))
 
         this.props.closeModal();
     }
@@ -43,7 +43,7 @@ class TransactionForm extends React.Component{
                     <label>
                         <input className='recipient' type="text" value={this.props.username}/>
                     </label>
-                    <input className='amount-paid' type="text" onChange={this.update('amount')} placeholder="How much? Ex: $5"/>
+                    <input className='amount-paid' type="text" onChange={this.update('amount')} placeholder="How much? Ex: 5"/>
                     <br/>
                     <textarea className='payment-message' onChange={this.update('body')} placeholder="What's it for?"/>
                     <br/>

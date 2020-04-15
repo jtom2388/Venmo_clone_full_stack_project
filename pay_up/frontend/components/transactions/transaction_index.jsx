@@ -7,13 +7,13 @@ class TransactionIndex extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchAllTransactions()
+        this.props.fetchAllTransactions();
     }
 
     render(){
         if(!this.props.transactions) return null
         const transactions = this.props.transactions.map((transaction, i) => {
-            return <TransactionIndexItem transaction={transaction} key={i} />
+            return <TransactionIndexItem transaction={transaction} users={this.props.users} key={i} />
         })
         return (
             <div className='transaction-container'>

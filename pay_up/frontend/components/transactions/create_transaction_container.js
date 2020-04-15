@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => ({
     createTransaction: transaction => dispatch(createTransaction(transaction)),
     closeModal: () => dispatch(closeModal()),
     fetchAllTransactions: () => dispatch(fetchAllTransactions()),
-    fetchUser: user => dispatch(fetchUser(user))
+    fetchUser: userId => dispatch(fetchUser(userId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TransactionForm);

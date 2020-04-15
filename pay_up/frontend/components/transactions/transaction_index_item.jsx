@@ -7,6 +7,7 @@ const TransactionIndexItem = props => {
     const time = timeData.split("T")[1].split(".")[0];
     const images = [window.person0, window.person1, window.person2, window.person3, window.person4, window.person5, window.person6, window.person7, window.person8, window.person9];
     
+
     return(
         <div className='transaction'> 
             <div className='transaction-div'>

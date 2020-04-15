@@ -1,7 +1,7 @@
 import { connect } from "react-redux"
 import { login, logout, signup } from '../../actions/session_actions';
 import Homepage from './homepage';
-import {fetchAllUsers, updateImage} from '../../actions/user_actions';
+import {fetchAllUsers, updateImage, fetchUser} from '../../actions/user_actions';
 import {fetchAllTransactions} from '../../actions/transactions_actions'
 
 const mapStatetoProps = state => { 
@@ -17,7 +17,8 @@ const mapDispatchtoProps = dispatch => ({
     logout: () => dispatch(logout()),
     fetchAllUsers: () => dispatch(fetchAllUsers()),
     fetchAllTransactions: () => dispatch(fetchAllTransactions()),
-    updateImage: user => dispatch(updateImage(user))
+    updateImage: user => dispatch(updateImage(user)),
+    fetchUser: user => dispatch(fetchUser(user))
 })
 
 export default connect(mapStatetoProps, mapDispatchtoProps)(Homepage);

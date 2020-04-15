@@ -18,13 +18,16 @@ class Api::UsersController < ApplicationController
     end
 
     def show
-      @user = User.find_by(username: params[:user][:transaction][:payer])
-      @recipient = User.find_by(username: params[:user][:transaction][:recipient])
-      render :show
+      # @user = User.find_by(username: params[:user][:transaction][:payer])
+      # @recipient = User.find_by(username: params[:user][:transaction][:recipient])
+      # render :show
+      @user = User.find_by(id: params[:id])
+      render '/api/users/show'
     end
 
     def update
       @user = User.find_by(id: params[:id])
+      
       # @user = {
       #   id: params[:user][:id],
       #   username: params[:user][:username],
@@ -32,6 +35,7 @@ class Api::UsersController < ApplicationController
       #   profile_photo: params[:user][:profile_photo]
       # }
       # @user["profile_photo"] = params[:user][:profile_photo] 
+    
       if @user.update(user_params)
         render '/api/users/show'
       else

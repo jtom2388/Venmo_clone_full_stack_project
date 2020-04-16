@@ -17,6 +17,8 @@
 }
 
 .profile-user-container {
+    display: flex;
+    padding: 5px;
     background: white;
     border-bottom: 1px solid #e9e9e9;
     border-top: 1px solid #a6a6a6;
@@ -109,3 +111,32 @@
     font-weight: bold;
 }
 
+/* .transaction-title-container {
+    border-bottom: 1px solid #e9e9e9;
+    margin: 0 auto;
+    border: lightgray solid 1px;
+    background-color: white;
+}
+
+.transaction-title {
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+} */
+
+.profile-header-left {
+    display: flex;
+    width: 50%;
+}
+
+
+.profile-header-right {
+    justify-content: flex-end;
+    display: flex;
+    width: 50%;
+}
+
+.profile-homepage-link {
+    color: #fff;
+    font-weight: 500;
+}

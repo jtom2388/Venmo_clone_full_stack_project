@@ -344,3 +344,37 @@
     height: 100%;
     cursor: pointer;
 }
+
+.header-left {
+    width: 50%;
+    display: flex;
+}
+
+.header-right {
+    justify-content: flex-end;
+    display: flex;
+    width: 50%;
+}
+
+.profile-link-container {
+    padding-right: 17%;
+    /* display: flex; */
+    width: 10%;
+}
+
+.logout-button-container {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-end;
+    width: 35%;
+}
+
+.profile-link {
+    color: #fff;
+    font-weight: 500;
+}
+
+.homepage-link {
+    color: #fff;
+    font-weight: 500;
+}

@@ -78,12 +78,26 @@ class Homepage extends React.Component{
             <div className='homepage'>
                 <div className='header'>
                     <div className='header-container'>
-                        <div className='header-logo'>
-                            <Link className='header-logo-a' to="/home">
-                                PayUp
-                            </Link>
+                        <div className='header-left'>
+                            <div className='header-logo'>
+                                <Link className='header-logo-a' to="/home">
+                                    PayUp
+                                </Link>
+                            </div>
+                            <div className='homepage-container'>
+                                <Link className='to-homepage' to="/home">
+                                    <p className='homepage-link'>Home</p>
+                                </Link>
+                            </div>
                         </div>
-                        <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
+                        <div className='header-right'>
+                            <div className='profile-link-container'>
+                                <Link className='profile-link' to="/profile">{this.props.currentUser.username}</Link>
+                            </div>
+                            <div className='logout-button-container'>
+                                <button className='logout-button' onClick={this.handleLogout}>Log Out</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

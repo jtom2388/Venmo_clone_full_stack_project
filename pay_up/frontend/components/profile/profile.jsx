@@ -72,6 +72,9 @@ class Profile extends React.Component{
                                     PayUp
                                 </Link>
                             </div>
+                            <div className='profile-search-container'>
+                                <input type="text" className='profile-search' placeholder='Search People'/>
+                            </div>
                             <div className='profile-to-homepage-container'>
                                 <Link className='profile-to-homepage' to="/home">
                                     <p className='profile-homepage-link'>Home</p>
@@ -137,7 +140,27 @@ class Profile extends React.Component{
                     </div>
                 </div>
 
-
+                <div className='homepage-footer'>
+                    <div className='homepage-icons-wrapper'>
+                        <div className='homepage-icons-container'>
+                            <div className='icons'>
+                                <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
+                                    <i className="fab fa-github-alt"></i>
+                                </a>
+                            </div>
+                            <div className='icons'>
+                                <a href="https://angel.co/u/jordan-philip-tom">
+                                    <i className="fab fa-angellist"></i>
+                                </a>
+                            </div>
+                            <div className='icons'>
+                                <a href="https://www.linkedin.com/in/jordanphiliptom/">
+                                    <i className="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
         

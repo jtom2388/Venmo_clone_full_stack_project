@@ -157,6 +157,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    /* padding-top: 56px;
+    margin-top: 48px; */
+    border-top: 1px solid #ededed
 }
 
 .icons-container {

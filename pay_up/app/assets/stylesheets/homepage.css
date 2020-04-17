@@ -378,3 +378,38 @@
     color: #fff;
     font-weight: 500;
 }
+
+.homepage-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage-icons-wrapper {
+    border-top: 2px solid #ccc;
+    width: 100%;
+    background-color: white;
+}
+
+.homepage-icons-container {
+    width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.homepage-search-container {
+    display: flex;
+    padding: 1%;
+    padding-right: 3%;
+}
+
+.homepage-search {
+    padding: 5px 22px 5px 5px;
+    /* background: #fff url(https://d1v6x81qdeozhc.cloudfront.net/static/assets/search-c8e6cda….png) no-repeat right 50%; */
+    font-size: 13px;
+    width: 300px;
+    border: 1px solid #2169A1;
+    border-bottom: 1px solid #2169A1;
+}

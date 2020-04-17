@@ -84,6 +84,9 @@ class Homepage extends React.Component{
                                     PayUp
                                 </Link>
                             </div>
+                            <div className='homepage-search-container'>
+                                <input type="text" className='homepage-search' placeholder='Search People'/>
+                            </div>
                             <div className='homepage-container'>
                                 <Link className='to-homepage' to="/home">
                                     <p className='homepage-link'>Home</p>
@@ -148,6 +151,28 @@ class Homepage extends React.Component{
                 {/* <div>
                     <RequestIndexContainer />
                 </div> */}
+
+                <div className='homepage-footer'>
+                    <div className='homepage-icons-wrapper'>
+                        <div className='homepage-icons-container'>
+                            <div className='icons'>
+                                <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
+                                    <i className="fab fa-github-alt"></i>
+                                </a>
+                            </div>
+                            <div className='icons'>
+                                <a href="https://angel.co/u/jordan-philip-tom">
+                                    <i className="fab fa-angellist"></i>
+                                </a>
+                            </div>
+                            <div className='icons'>
+                                <a href="https://www.linkedin.com/in/jordanphiliptom/">
+                                    <i className="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         )

@@ -140,3 +140,18 @@
     color: #fff;
     font-weight: 500;
 }
+
+.profile-search-container {
+    display: flex;
+    padding: 1%;
+    padding-right: 3%;
+}
+
+.profile-search {
+    padding: 5px 22px 5px 5px;
+    /* background: #fff url(https://d1v6x81qdeozhc.cloudfront.net/static/assets/search-c8e6cda….png) no-repeat right 50%; */
+    font-size: 13px;
+    width: 300px;
+    border: 1px solid #2169A1;
+    border-bottom: 1px solid #2169A1;
+}

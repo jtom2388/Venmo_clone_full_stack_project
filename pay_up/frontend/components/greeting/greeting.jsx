@@ -49,21 +49,23 @@ class Greeting extends React.Component{
             </div>
             
             <div className='footer'>
-                <div className='icons-container'>
-                    <div className='icons'>
-                        <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
-                            <i className="fab fa-github-alt"></i>
-                        </a>
-                    </div>
-                    <div className='icons'>
-                        <a href="https://angel.co/u/jordan-philip-tom">
-                            <i className="fab fa-angellist"></i>
-                        </a>
-                    </div>
-                    <div className='icons'>
-                        <a href="https://www.linkedin.com/in/jordanphiliptom/">
-                            <i className="fab fa-linkedin-in"></i>
-                        </a>
+                <div className='icons-wrapper'>
+                    <div className='icons-container'>
+                        <div className='icons'>
+                            <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
+                                <i className="fab fa-github-alt"></i>
+                            </a>
+                        </div>
+                        <div className='icons'>
+                            <a href="https://angel.co/u/jordan-philip-tom">
+                                <i className="fab fa-angellist"></i>
+                            </a>
+                        </div>
+                        <div className='icons'>
+                            <a href="https://www.linkedin.com/in/jordanphiliptom/">
+                                <i className="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

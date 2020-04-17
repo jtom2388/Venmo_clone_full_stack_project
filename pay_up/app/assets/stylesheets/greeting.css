@@ -166,7 +166,7 @@
 }
 
 .icons-container {
-    width: 900px;
+    margin: auto;
     display: flex;
     justify-content: flex-end;
     padding: 10px;
@@ -174,4 +174,9 @@
 
 .icons {
     width: 4rem;
+}
+
+.icons-wrapper {
+    border-top: 1px solid #ededed;
+    width: 100%;
 }

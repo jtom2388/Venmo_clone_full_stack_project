@@ -7,7 +7,7 @@ import {fetchAllTransactions} from '../../actions/transactions_actions'
 const mapStatetoProps = state => { 
     return ({
     currentUser: state.entities.users[state.session.id],
-    // users: Object.values(state.entities.user),
+    users: Object.values(state.entities.user),
     transactions: Object.values(state.entities.transactions)
 })};
 

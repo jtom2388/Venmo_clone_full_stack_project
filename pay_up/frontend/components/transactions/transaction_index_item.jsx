@@ -47,9 +47,6 @@ class TransactionIndexItem extends React.Component {
     const time = timeData.split("T")[1].split(".")[0];
 
     let currentPayer = this.props.users.filter(user => user.id === this.props.transaction.payerId)[0]
-    console.log(currentPayer, "currentPayer")
-    console.log(this.props.users, "users")
-    console.log(this.props.transaction.payerId, "payerId")
 
     return(
         <div className='transaction'> 

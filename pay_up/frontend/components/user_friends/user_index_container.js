@@ -14,7 +14,8 @@ const mapStateToProps = state => ({
         recipient_id: ''
     },
     transactions: Object.values(state.entities.transactions),
-    requests: Object.values(state.entities.requests)
+    requests: Object.values(state.entities.requests),
+    currentUser: state.entities.users[state.session.id]
 })
 
 const mapDispatchToProps = dispatch => ({

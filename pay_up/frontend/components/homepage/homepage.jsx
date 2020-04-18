@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import TransactionIndexContainer from '../transactions/transaction_index_container';
 import UserIndexContainer from '../user_friends/user_index_container';
+import UserIndexItem from '../user_friends/user_index_item';
 import RequestIndexContainer from '../request/request_index_container';
 import 'babel-polyfill';
 
@@ -73,6 +74,7 @@ class Homepage extends React.Component{
 
     render() {
         const preview = this.state.imageURL ? <img src={this.state.imageURL} /> : null;
+        const contacts = this.props.users.filter(user => user.id !== this.props.currentUser.id); 
         
         return (
             <div className='homepage'>
@@ -143,6 +145,7 @@ class Homepage extends React.Component{
                             <br/>
                             <div>
                                 <UserIndexContainer hideUsers={this.state.hideUsers} />
+                                
                             </div>
                         </div>
                     </div>

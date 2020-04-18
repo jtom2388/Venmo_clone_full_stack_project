@@ -28,7 +28,8 @@
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
+    align-items: center;
 }
 
 .profile-header {
@@ -154,4 +155,19 @@
     width: 300px;
     border: 1px solid #2169A1;
     border-bottom: 1px solid #2169A1;
+}
+
+.profile-user-transactions {
+    padding: 25px 2rem 0 2rem;
+    width: 60%;
+}
+
+.profile-user-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.profile-user-photo {
+    width: 50%;
 }

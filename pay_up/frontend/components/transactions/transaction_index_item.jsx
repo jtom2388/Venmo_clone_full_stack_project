@@ -46,16 +46,17 @@ class TransactionIndexItem extends React.Component {
     const day = timeData.split("T")[0];
     const time = timeData.split("T")[1].split(".")[0];
 
+    let currentPayer = this.props.users.filter(user => user.id === this.props.transaction.payerId)[0]
+    console.log(currentPayer, "currentPayer")
+    console.log(this.props.users, "users")
+    console.log(this.props.transaction.payerId, "payerId")
+
     return(
         <div className='transaction'> 
             <div className='transaction-div'>
                 <div className='transaction-info'>
                     <div className='transaction-left'>
-                        {/* <img src={this.props.users.map(user => {
-                            if(user.id === this.props.transaction.payer_id){
-                                user.photoURL
-                            }
-                        })} alt=""/> */}
+                        <img className='payer-photo' src={currentPayer.photoURL} alt=""/>
                     </div>
                     <div className='transaction-middle'>
                         <p className='transaction-users'>{this.props.transaction.payer} paid {this.props.transaction.recipient}</p>

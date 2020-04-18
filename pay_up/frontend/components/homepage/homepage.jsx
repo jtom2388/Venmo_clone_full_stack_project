@@ -73,7 +73,7 @@ class Homepage extends React.Component{
 
     render() {
         const preview = this.state.imageURL ? <img src={this.state.imageURL} /> : null;
-
+        
         return (
             <div className='homepage'>
                 <div className='header'>

@@ -6,13 +6,14 @@ import Profile from './profile';
 
 const mapStatetoProps = state => ({
     currentUser: state.entities.users[state.session.id],
-    transactions: Object.values(state.entities.transactions)
+    transactions: Object.values(state.entities.transactions),
+    users: Object.values(state.entities.user)
 });
 
 const mapDispatchtoProps = dispatch => ({
     logout: () => dispatch(logout()),
     fetchAllUsers: () => dispatch(fetchAllUsers()),
-    fetchAllTransactions: () => dispatch(fetchAllTransactions),
+    fetchAllTransactions: () => dispatch(fetchAllTransactions()),
     fetchUser: user => dispatch(fetchUser(user)),
     updateImage: user => dispatch(updateImage(user))
 });

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import UserIndexContainer from '../user_friends/user_index_container';
 import TransactionIndexContainer from '../transactions/transaction_index_container';
-
+import TransactionIndexItem from '../transactions/transaction_index_item';
 
 class Profile extends React.Component{
 
@@ -19,7 +19,9 @@ class Profile extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchAllUsers();
+        this.props.fetchAllUsers().then(() => {
+            this.props.fetchAllTransactions();
+        })
     }
 
     toggleUsers() {
@@ -54,7 +56,7 @@ class Profile extends React.Component{
                 console.log(user, "result-user")
             })
         }
-        console.log(file, "file-result")
+        // console.log(file, "file-result")
         // console.log(formData, "formData-2")
         // let user = Object.assign({}, this.props.currentUser);
         // this.props.updateImage(user)
@@ -96,10 +98,12 @@ class Profile extends React.Component{
                     <div className='profile-main-container'>
                         <div className="profile-main-left">
                             <div className='profile-user-transactions'>
-                                {/* <div className='transaction-title-container'>
-                                    <p className='transaction-title'>Your Payments</p>
-                                </div> */}
-                                <TransactionIndexContainer />
+                                {this.props.transactions.map((transaction, idx) => {
+                                    if(this.props.currentUser.username === transaction.payer || this.props.currentUser.username === transaction.recipient){
+                                        return <TransactionIndexItem users={this.props.users} transaction={transaction} key={idx}/>
+                                    } 
+                                })}
+                                {/* <TransactionIndexContainer /> */}
                             </div>
                         </div>
                         <div className="profile-main-right">

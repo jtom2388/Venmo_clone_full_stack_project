@@ -5,16 +5,40 @@ import UserIndexContainer from '../user_friends/user_index_container';
 import UserIndexItem from '../user_friends/user_index_item';
 import RequestIndexContainer from '../request/request_index_container';
 import 'babel-polyfill';
+import TransactionIndex from '../transactions/transaction_index';
 
 class Homepage extends React.Component{
     
     constructor(props){
         super(props);
         this.handleLogout = this.handleLogout.bind(this);
-        this.state = { hideUsers: true, imageURL: null, imageFile: null };
+        this.state = { hideUsers: true, imageURL: null, imageFile: null, filteredTransactions: this.props.transactions, searchTerm: '' };
         this.toggleUsers = this.toggleUsers.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.onInputChange = this.onInputChange.bind(this);
         // this.submitImage = this.submitImage.bind(this);
+    }
+
+    onInputChange(e) {
+        // $("html, body").animate({ scrollTop: 0} , 'fast');
+        // console.log(this.props.users)
+        // console.log(e.target.value, "value")
+        // let newResult = this.props.users.filter(user => user.username.toLowerCase().includes(e.target.value.toLowerCase()));
+        // console.log(newResult, "newResult")
+        let resultsSet = new Set();
+        for(let i = 0; i < this.props.users.length; i++){
+            if(this.props.users[i].username.toLowerCase().includes(e.target.value.toLowerCase())){
+                resultsSet.add(this.props.users[i].id)
+            }
+        }
+        // resultsSet.add(this.props.currentUser.id)
+        let filteredTransactions = this.props.transactions.filter(transaction => {
+            return (resultsSet.has(transaction.payerId) || resultsSet.has(transaction.recipientId))
+        })
+        this.setState({
+            searchTerm: e.target.value,
+            filteredTransactions: filteredTransactions
+        });
     }
 
     handleLogout(){
@@ -22,7 +46,21 @@ class Homepage extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchAllUsers();
+        this.props.fetchAllUsers().then( () => {
+            this.props.fetchAllTransactions().then( () => {
+
+                this.setState({filteredTransactions: this.props.transactions})
+            })
+        })
+    }
+
+    componentDidUpdate(prevProps){
+        if(this.props.transactions.length !== prevProps.transactions.length){
+            let filteredTransactions = this.props.transactions.map(transaction => {
+                return transaction
+            })
+            this.setState({filteredTransactions})
+        }
     }
 
     toggleUsers() {
@@ -87,7 +125,7 @@ class Homepage extends React.Component{
                                 </Link>
                             </div>
                             <div className='homepage-search-container'>
-                                <input type="text" className='homepage-search' placeholder='Search People'/>
+                                <input type="text" onChange={this.onInputChange} className='homepage-search' placeholder='Search People'/>
                             </div>
                             <div className='homepage-container'>
                                 <Link className='to-homepage' to="/home">
@@ -109,7 +147,8 @@ class Homepage extends React.Component{
                 <div className='homepage-main'>
                     <div className='homepage-main-container'>
                         <div className="homepage-main-left">
-                            <TransactionIndexContainer />
+
+                            <TransactionIndex transactions={this.state.filteredTransactions} currentUser={this.props.currentUser} users={this.props.users} fetchAllTransactions={this.props.fetchAllTransactions} />
                         </div>
                         <div className="homepage-main-right">
                             <div className='current-user-container'>

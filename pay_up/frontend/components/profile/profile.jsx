@@ -3,15 +3,41 @@ import { Link } from 'react-router-dom';
 import UserIndexContainer from '../user_friends/user_index_container';
 import TransactionIndexContainer from '../transactions/transaction_index_container';
 import TransactionIndexItem from '../transactions/transaction_index_item';
+import TransactionIndex from '../transactions/transaction_index';
 
 class Profile extends React.Component{
 
     constructor(props){
         super(props);
         this.handleLogout = this.handleLogout.bind(this);
-        this.state = { hideUsers: true };
+        this.state = { hideUsers: true, filteredTransactions: this.props.transactions, searchTerm: '', userTransactions: this.props.transactions };
         this.toggleUsers = this.toggleUsers.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.onInputChange = this.onInputChange.bind(this);
+        // this.fetchUserTransactions = this.fetchUserTransactions.bind(this);
+    }
+
+    onInputChange(e) {
+        // $("html, body").animate({ scrollTop: 0} , 'fast');
+        // console.log(this.props.users)
+        // console.log(e.target.value, "value")
+        // let newResult = this.props.users.filter(user => user.username.toLowerCase().includes(e.target.value.toLowerCase()));
+        // console.log(newResult, "newResult")
+        let resultsSet = new Set();
+        for(let i = 0; i < this.props.users.length; i++){
+            if(this.props.users[i].username.toLowerCase().includes(e.target.value.toLowerCase())){
+                resultsSet.add(this.props.users[i].id)
+            }
+        }
+        
+        let filteredTransactions = this.props.transactions.filter(transaction => {
+            if (transaction.payerId !== this.props.currentUser.id && transaction.recipientId !== this.props.currentUser.id) return false;
+            return resultsSet.has(transaction.payerId) || resultsSet.has(transaction.recipientId);
+        })
+        this.setState({
+            searchTerm: e.target.value,
+            filteredTransactions: filteredTransactions
+        });
     }
 
     handleLogout(){
@@ -20,13 +46,31 @@ class Profile extends React.Component{
 
     componentDidMount(){
         this.props.fetchAllUsers().then(() => {
-            this.props.fetchAllTransactions();
+            this.props.fetchAllTransactions().then( () => {
+                let filteredTransactions = this.props.transactions.filter(transaction => {
+                    return (
+                        this.props.currentUser.id === transaction.payerId ||
+                        this.props.currentUser.id === transaction.recipientId
+                    );
+                })
+                this.setState({ filteredTransactions });
+            })
         })
     }
 
     toggleUsers() {
         this.setState({ hideUsers: !this.state.hideUsers });
     }
+
+    // fetchUserTransactions(){
+    //     let userTransactions = this.props.transactions.filter(transaction => {
+    //         return (transaction.payerId === this.props.currentUser.id || transaction.recipientId === this.props.currentUser.id)
+    //     })
+    //     this.props.fetchAllTransactions().then( () => {
+
+    //         this.setState({ userTransactions: userTransactions })
+    //     })
+    // }
 
     async handleFile(e){
         e.preventDefault();
@@ -62,8 +106,22 @@ class Profile extends React.Component{
         // this.props.updateImage(user)
     }
 
-    render() {
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        // console.log(prevProps.transactions.length, "length for prevprops")
+        // console.log(this.props.transactions.length, "length for props transactions")
+        if(this.props.transactions.length !== prevProps.transactions.length){
+            let filteredTransactions = this.props.transactions.filter(transaction => {
+                return (
+                    this.props.currentUser.id === transaction.payerId ||
+                    this.props.currentUser.id === transaction.recipientId
+                );
+            })
+            this.setState({filteredTransactions});
+        }
+    }
 
+    render() {
         return (
             <div className='profile'>
                 <div className='profile-header'>
@@ -75,7 +133,7 @@ class Profile extends React.Component{
                                 </Link>
                             </div>
                             <div className='profile-search-container'>
-                                <input type="text" className='profile-search' placeholder='Search People'/>
+                                <input type="text" onChange={this.onInputChange} className='profile-search' placeholder='Search People'/>
                             </div>
                             <div className='profile-to-homepage-container'>
                                 <Link className='profile-to-homepage' to="/home">
@@ -98,12 +156,13 @@ class Profile extends React.Component{
                     <div className='profile-main-container'>
                         <div className="profile-main-left">
                             <div className='profile-user-transactions'>
-                                {this.props.transactions.map((transaction, idx) => {
+                                {/* {this.props.transactions.map((transaction, idx) => {
                                     if(this.props.currentUser.username === transaction.payer || this.props.currentUser.username === transaction.recipient){
                                         return <TransactionIndexItem users={this.props.users} transaction={transaction} key={idx}/>
                                     } 
-                                })}
-                                {/* <TransactionIndexContainer /> */}
+                                })} */}
+                                <TransactionIndex transactions={this.state.filteredTransactions} currentUser={this.props.currentUser} users={this.props.users} />
+                                
                             </div>
                         </div>
                         <div className="profile-main-right">

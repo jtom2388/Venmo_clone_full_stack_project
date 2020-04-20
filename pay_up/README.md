@@ -71,6 +71,9 @@ handleSubmit(e, username){
       this.props.closeModal();
 }
 ```
+![TransactionForm](./screenshots/transaction_form.png)
+![Payment](./screenshots/transaction_payment.png)
+![Feed](./screenshots/new_transaction.png)
 
 ## 3) Users List
 All users have access to a toggleable users list, which displays other users with accounts. There, they can choose to pay any specified user.
@@ -89,6 +92,7 @@ const users = this.props.users.map((user, i) => {
     }
 })
 ```
+![Users](./screenshots/users_list.png)
 
 ## Features to be Implemented in the Future
 

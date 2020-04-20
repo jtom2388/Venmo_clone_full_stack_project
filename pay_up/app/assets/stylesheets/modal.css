@@ -16,20 +16,34 @@
 }
 
 .submit-transaction {
-  border-radius: 12px;
-  background-color: lightgreen;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #3D95CE;
+  padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.submit-transaction:hover {
+  background-color: #ededed;
+  font-weight: bold;
+  color: #3D95CE;
 }
 
 .transaction-header{
-  color: rgb(231, 231, 231);
+  color: #ededed;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .amount-paid{
   font-size: 20px;
+  /* color: #3D95CE; */
+  font-weight: bold;
 }
 
 .recipient{
@@ -37,11 +51,14 @@
   font-weight: bold;
   font-variant-ligatures: historical-ligatures;
   font-size: 20px;
+  /* color: #3D95CE; */
 }
 
 .payment-message{
   font-size: 20px;
   width: 100%;
+  /* color: #3D95CE; */
+  font-weight: bold;
 }
 
 .request-header{

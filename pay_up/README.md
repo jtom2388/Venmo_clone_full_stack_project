@@ -22,17 +22,17 @@ Users can create an account, log in, and log out. They can also log in as a gues
 **Login Backend**:
 ```
 def create
-        @user = User.find_by_credentials(
-            params[:user][:username],
-            params[:user][:password]
-        )
+    @user = User.find_by_credentials(
+        params[:user][:username],
+        params[:user][:password]
+    )
 
-        if @user
-            log_in(@user)
-            render '/api/users/show'
-        else
-            render json: ['Invalid username/password combination'], status: 401
-        end
+    if @user
+        log_in(@user)
+        render '/api/users/show'
+    else
+        render json: ['Invalid username/password combination'], status: 401
+    end
 end
 ```
 **Login Frontend**:
@@ -43,6 +43,8 @@ export const login = user => dispatch => (
         errors => dispatch(receiveErrors(errors.responseJSON)))
 )
 ```
+![Login](./screenshots/payup_login.png)
+![Home](./screenshots/payup_home.png)
 
 ## 2) Payments / Transactions
 Users can pay any amount of money to a specified user in the app. All transactions are presented in a feed showing activity from all users. User balances are immediately updated to reflect their appropriate amounts upon successful transaction. New transactions are added to the feed when payment is complete.

@@ -158,14 +158,14 @@
 }
 
 .profile-user-transactions {
-    padding: 25px 2rem 0 2rem;
+    padding: 0 2rem 0 0;
     width: 60%;
 }
 
 .profile-user-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0 0 9px 10px;
 }
 
 .profile-user-photo {

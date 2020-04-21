@@ -15,7 +15,7 @@ class Api::TransactionsController < ApplicationController
         # end
         @payer = User.find_by(id: params[:transaction][:payer_id])
         @recipient = User.find_by(id: params[:transaction][:recipient_id])
-        if @payer.balance < @transaction.amount || @payer == @recipient
+        if @payer.balance < @transaction.amount
             render json: ['Invalid transaction! Try again.'], status: 418
         else
             if @transaction.save

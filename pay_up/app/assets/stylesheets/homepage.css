@@ -3,7 +3,7 @@
 }
 
 .transaction-container {
-    padding: 25px 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
     width: 60%;
     /* margin: 0 auto; */
 }
@@ -30,12 +30,13 @@
 }
 
 .transaction-middle {
-    width: 70%;
+    width: 60%;
 }
 
 .transaction-right {
     display: flex;
-    width: 10%;
+    width: 20%;
+    justify-content: space-around;
 }
 
 .transaction-info{
@@ -68,15 +69,14 @@
 }
 
 .top-level-container{
-    /* width: 75%; */
-    /* margin: 0 auto; */
+    padding: 0 0.1rem 0 0.1rem;
     overflow: hidden;
     max-height: 10000px;
     height: auto;
     transition: all 300ms ease-in-out;
     background-color: white;
-    width: 206px;
-    /* display: flex; */
+    width: auto;
+    margin: auto auto;
 }
 
 .hide-users {
@@ -109,6 +109,7 @@
 .add-photo {
     color: #057FC6;
     position: relative;
+    padding: 0.1rem;
 }
 
 .friends-image{
@@ -198,7 +199,7 @@
 .homepage-main-right{
     width: 30%;
     height: auto;
-    padding: 25px 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .current-user-container {
@@ -213,7 +214,7 @@
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;
-    padding: 10px;
+    padding: 1rem;
     align-items: center;
 }
 
@@ -316,10 +317,10 @@
 }
 
 .current-user-wrapper {
+    width: 50%;
     display: flex;
- 
     flex-direction: column;
-    padding: 10px;
+    padding: 0.5em;
 }
 
 .photo-label {
@@ -393,8 +394,7 @@
 
 .homepage-search-container {
     display: flex;
-    padding: 1%;
-    padding-right: 3%;
+    padding: 0.3rem;
 }
 
 .homepage-search {
@@ -413,4 +413,8 @@
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+}
+
+.homepage-container {
+    padding: 0 0.5rem 0 0.5rem;
 }

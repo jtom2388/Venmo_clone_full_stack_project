@@ -21,9 +21,7 @@ class TransactionForm extends React.Component{
             body: this.state.body,
             payer_id: this.props.currentUserId,
             recipient_id: this.userId
-        }).then(() => this.props.fetchUser(this.props.currentUserId).then(()=>{
-            this.props.fetchAllTransactions();
-        }))
+        }).then(() => this.props.fetchUser(this.props.currentUserId))
 
         this.props.closeModal();
     }

@@ -12,8 +12,8 @@
 
 .profile-main-right{
     width: 30%;
-    height: 490px;
-    padding: 25px 2rem 0 2rem;
+    height: auto;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .profile-user-container {
@@ -28,7 +28,7 @@
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;
-    padding: 10px 10px 0px 10px;
+    padding: 0 0 0 0.7rem;
     align-items: center;
 }
 
@@ -144,15 +144,16 @@
 
 .profile-search-container {
     display: flex;
-    padding: 1%;
-    padding-right: 3%;
+    padding: 0.3rem 0rem 0.3rem 0;
+    width: 59%;
+    margin: auto auto;
 }
 
 .profile-search {
-    padding: 5px 22px 5px 5px;
+    padding: 0.3rem 1rem 0.3rem 0.3rem;
     /* background: #fff url(https://d1v6x81qdeozhc.cloudfront.net/static/assets/search-c8e6cda….png) no-repeat right 50%; */
     font-size: 13px;
-    width: 300px;
+    width: 100%;
     border: 1px solid #2169A1;
     border-bottom: 1px solid #2169A1;
 }
@@ -163,9 +164,11 @@
 }
 
 .profile-user-wrapper {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    padding: 0 0 9px 10px;
+    padding: 0.5em;
+    margin: auto auto;
 }
 
 .profile-user-photo {

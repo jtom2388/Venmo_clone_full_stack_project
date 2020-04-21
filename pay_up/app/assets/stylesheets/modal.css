@@ -44,6 +44,7 @@
   font-size: 20px;
   /* color: #3D95CE; */
   font-weight: bold;
+  width: 50%;
 }
 
 .recipient{
@@ -51,6 +52,7 @@
   font-weight: bold;
   font-variant-ligatures: historical-ligatures;
   font-size: 20px;
+  width: 50%;
   /* color: #3D95CE; */
 }
 

@@ -214,7 +214,7 @@
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.7rem;
     align-items: center;
 }
 
@@ -394,14 +394,16 @@
 
 .homepage-search-container {
     display: flex;
-    padding: 0.3rem;
+    padding: 0.3rem 0rem 0.3rem 0;
+    width: 59%;
+    margin: auto auto;
 }
 
 .homepage-search {
-    padding: 5px 22px 5px 5px;
+    padding: 0.3rem 1rem 0.3rem 0.3rem;
     /* background: #fff url(https://d1v6x81qdeozhc.cloudfront.net/static/assets/search-c8e6cda….png) no-repeat right 50%; */
     font-size: 13px;
-    width: 300px;
+    width: 100%;
     border: 1px solid #2169A1;
     border-bottom: 1px solid #2169A1;
 }

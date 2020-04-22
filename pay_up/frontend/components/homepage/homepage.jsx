@@ -160,7 +160,7 @@ class Homepage extends React.Component{
                                         <Link className='current-user-name' to="/profile">{this.props.currentUser.username}</Link>
                                         {/* {this.props.currentUser.username} */}
                                     </div>
-                                    <div>
+                                    <div className='add-photo-container'>
                                         <label className='photo-label'>
                                             <p className='add-photo'>Add Photo</p>
                                             

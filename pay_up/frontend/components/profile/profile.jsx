@@ -142,7 +142,7 @@ class Profile extends React.Component{
                             </div>
                         </div>
                         <div className='profile-header-right'>
-                            <div className='profile-link-container'>
+                            <div className='link-to-profile-container'>
                                 <Link className='profile-link' to="/profile">{this.props.currentUser.username}</Link>
                             </div>
                             <div className='profile-logout-button-container'>
@@ -167,18 +167,18 @@ class Profile extends React.Component{
                         </div>
                         <div className="profile-main-right">
                             <div className='profile-user-container'>
-                                <div className='profile-user-photo'>
-                                    <img className='user-photo' src={this.props.currentUser.photoURL} alt=""/>
+                                <div className='profile-user-photo-container'>
+                                    <img className='profile-user-photo' src={this.props.currentUser.photoURL} alt=""/>
                                 </div>
                                 <div className='profile-user-wrapper'>
-                                    <div className='profile-user'>
-                                        {this.props.currentUser.username}
+                                    <div className='profile-user-name-container'>
+                                        <p className='profile-user'>{this.props.currentUser.username}</p>
                                     </div>
-                                    <div>
-                                        <label className='photo-label'>
-                                            <p className='add-photo'>Add Photo</p>
+                                    <div className='profile-add-photo-container'>
+                                        <label className='profile-photo-label'>
+                                            <p className='profile-add-photo'>Add Photo</p>
                                             
-                                            <input className='photo-file' 
+                                            <input className='profile-photo-file' 
                                             onChange={this.handleFile}
                                             // {...preview}
                                             id='photo-upload'

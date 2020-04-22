@@ -59,6 +59,8 @@
     float: left;
     width: 100px;
     height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .profile-header-logo-a {
@@ -71,6 +73,13 @@
     text-decoration: none;
 }
 
+.profile-logout-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* width: 35%; */
+}
+
 .profile-logout-button {
     color: #3D95CE;
     background-color: #fff;
@@ -81,6 +90,7 @@
     border-radius: 5px;
     border: 1px solid #fff;
     cursor: pointer;
+    height: 100%;
 }
 
 .profile-logout-button:hover {
@@ -137,6 +147,7 @@
 
 .profile-header-right {
     justify-content: flex-end;
+    align-items: center;
     display: flex;
     width: 50%;
 }

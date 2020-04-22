@@ -5,7 +5,7 @@ const transactionErrorsReducer = ((state = [], action) => {
 
     switch (action.type) {
         case RECEIVE_TRANSACTION_ERRORS:
-            return action.tranErrors;
+            return action.transactionErrors;
         case RECEIVE_TRANSACTION:
             return [];
         default:

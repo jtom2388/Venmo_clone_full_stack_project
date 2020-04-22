@@ -143,11 +143,15 @@ class Homepage extends React.Component{
                         </div>
                     </div>
                 </div>
-
+                <div className='trans-error-container'>
+                    {this.props.transactionErrors.map( (error, i) => (
+                        <div className='trans-error' key={`${i}`}>{error}</div>
+                    ))}
+                </div>
                 <div className='homepage-main'>
                     <div className='homepage-main-container'>
                         <div className="homepage-main-left">
-
+                            
                             <TransactionIndex transactions={this.state.filteredTransactions} currentUser={this.props.currentUser} users={this.props.users} fetchAllTransactions={this.props.fetchAllTransactions} />
                         </div>
                         <div className="homepage-main-right">

@@ -151,7 +151,11 @@ class Profile extends React.Component{
                         </div>
                     </div>
                 </div>
-
+                <div className='trans-error-container'>
+                    {this.props.transactionErrors.map( (error, i) => (
+                        <div className='trans-error' key={`${i}`}>{error}</div>
+                    ))}
+                </div>
                 <div className='profile-main'>
                     <div className='profile-main-container'>
                         <div className="profile-main-left">

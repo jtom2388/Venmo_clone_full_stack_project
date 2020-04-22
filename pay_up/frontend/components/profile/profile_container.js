@@ -7,7 +7,8 @@ import Profile from './profile';
 const mapStatetoProps = state => ({
     currentUser: state.entities.users[state.session.id],
     transactions: Object.values(state.entities.transactions),
-    users: Object.values(state.entities.user)
+    users: Object.values(state.entities.user),
+    transactionErrors: state.errors.transactionErrors
 });
 
 const mapDispatchtoProps = dispatch => ({

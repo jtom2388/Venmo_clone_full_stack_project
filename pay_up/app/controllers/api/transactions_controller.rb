@@ -21,9 +21,11 @@ class Api::TransactionsController < ApplicationController
             if @transaction.save
                 @payer.payer_change(@transaction.amount)
                 @recipient.recipient_change(@transaction.amount)
+                render '/api/transactions/show'
+            else
+                render json: ['Invalid transaction! Try again.'], status: 418
             end
         end
-        render '/api/transactions/show'
     end
 
     def index

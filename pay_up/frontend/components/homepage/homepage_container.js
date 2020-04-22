@@ -8,7 +8,8 @@ const mapStatetoProps = state => {
     return ({
     currentUser: state.entities.users[state.session.id],
     users: Object.values(state.entities.user),
-    transactions: Object.values(state.entities.transactions)
+    transactions: Object.values(state.entities.transactions),
+    transactionErrors: state.errors.transactionErrors
 })};
 
 const mapDispatchtoProps = dispatch => ({

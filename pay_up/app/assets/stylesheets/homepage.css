@@ -11,7 +11,7 @@
 .transaction{
     border: lightgray solid 1px;
     position: relative;
-    width: 500px;
+    min-width: 500px;
     background-color: white;
     margin: 0 auto;
     display: flex;
@@ -198,7 +198,7 @@
 }
 
 .homepage-main-right{
-    width: 30%;
+    width: 35%;
     height: auto;
     padding: 2rem 2rem 0 2rem;
 }
@@ -289,7 +289,7 @@
 }
 
 .homepage-main-container {
-    width: 900px;
+    min-width: 900px;
     /* justify-content: space-between; */
     display: flex;  
 }

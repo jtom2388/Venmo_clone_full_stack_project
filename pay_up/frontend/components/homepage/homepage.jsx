@@ -186,7 +186,7 @@ class Homepage extends React.Component{
                                 <button onClick={this.toggleUsers} className='collapsible'>{this.state.hideUsers ? "Show Users" : "Hide Users"}</button>
                             </div>
                             <br/>
-                            <div>
+                            <div className='top-main'>
                                 <UserIndexContainer hideUsers={this.state.hideUsers} />
                                 
                             </div>

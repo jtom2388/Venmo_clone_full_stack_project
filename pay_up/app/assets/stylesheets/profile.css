@@ -11,7 +11,7 @@
 }
 
 .profile-main-right{
-    width: 30%;
+    width: 35%;
     height: auto;
     padding: 2rem 2rem 0 2rem;
 }
@@ -34,6 +34,7 @@
     text-decoration: none;
     /* padding: 0.7rem; */
     align-items: center;
+    text-overflow: ellipsis;
 }
 
 .profile-header {

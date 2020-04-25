@@ -48,6 +48,7 @@
 .transaction-users{
     font-weight: bold;
     color: rgb(100, 100, 100);
+    text-overflow: ellipsis;
 }
 
 .transaction-time {
@@ -374,6 +375,7 @@
 .profile-link {
     color: #fff;
     font-weight: 500;
+    text-overflow: ellipsis;
 }
 
 .homepage-link {

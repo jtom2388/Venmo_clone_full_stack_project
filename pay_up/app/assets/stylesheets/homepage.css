@@ -231,7 +231,7 @@
     font-weight: bold;
     color: #057FC6;
     text-decoration: none;
-    padding: 0.7rem;
+    /* padding: 0.7rem; */
     align-items: center;
     text-overflow: ellipsis;
 }

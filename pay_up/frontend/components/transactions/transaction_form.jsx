@@ -37,16 +37,13 @@ class TransactionForm extends React.Component{
                 <form onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
                     <h1 className='transaction-header'>Pay</h1>
                     <h2 className='balance-header'></h2>
-                    {/* {this.props.transactionErrors.map( (error, i) => (
-                        <div className='trans-error' key={`${i}`}>{error}</div>
-                    ))} */}
                     <label>
                         <input className='recipient' type="text" value={this.props.username}/>
                     </label>
                     <input className='amount-paid' type="text" onChange={this.update('amount')} placeholder="How much? Ex: 5"/>
-                    <br/>
+                    {/* <br/> */}
                     <textarea className='payment-message' onChange={this.update('body')} placeholder="What's it for?"/>
-                    <br/>
+                    {/* <br/> */}
                     <button type='submit' className='submit-transaction'>Pay</button>
                 </form>
             </div>

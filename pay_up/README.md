@@ -1,6 +1,8 @@
 # PayUp
 [Live Demo](http://payup-app.herokuapp.com/#/)
 
+![Splash](./screenshots/splash.png)
+
 PayUp is demonstration web application modeled as a clone of Venmo. The main functionality of the site is to be able to pay to any given amount of money to any user with an account, so long as the payer's balance is adequate for the transaction.
 
 ## Technology

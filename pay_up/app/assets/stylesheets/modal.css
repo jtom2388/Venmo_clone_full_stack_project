@@ -20,14 +20,17 @@
 .submit-transaction {
   color: #fff;
   font-weight: bold;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border-radius: 1vh;
   background-color: #3D95CE;
-  padding: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border: 1px solid #fff;
+  /* padding: 10px; */
+  /* padding-left: 50px; */
+  /* padding-right: 50px; */
+  padding: 0.6rem 3vw 0.6rem 3vw;
+  border: 0.1vh solid #fff;
   cursor: pointer;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 2vh;
 }
 
 .submit-transaction:hover {
@@ -38,12 +41,14 @@
 
 .transaction-header{
   color: #ededed;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: 4vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .amount-paid{
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 2vh;
   /* color: #3D95CE; */
   font-weight: bold;
   width: 50%;
@@ -53,13 +58,15 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-variant-ligatures: historical-ligatures;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 2vh;
   width: 50%;
   /* color: #3D95CE; */
 }
 
 .payment-message{
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 2vh;
   width: 100%;
   /* color: #3D95CE; */
   font-weight: bold;

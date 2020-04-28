@@ -34,12 +34,12 @@ class TransactionForm extends React.Component{
         
         return(
             <div>
-                <form onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
+                <form className='transaction-form' onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
                     <h1 className='transaction-header'>Pay</h1>
                     <h2 className='balance-header'></h2>
-                    <label>
+                    {/* <label> */}
                         <input className='recipient' type="text" value={this.props.username}/>
-                    </label>
+                    {/* </label> */}
                     <input className='amount-paid' type="text" onChange={this.update('amount')} placeholder="How much? Ex: 5"/>
                     {/* <br/> */}
                     <textarea className='payment-message' onChange={this.update('body')} placeholder="What's it for?"/>

@@ -12,7 +12,8 @@
 .transaction{
     border: lightgray solid 1px;
     position: relative;
-    min-width: 500px;
+    /* min-width: 500px; */
+    width: 100%;
     background-color: white;
     margin: 0 auto;
     display: flex;
@@ -68,6 +69,7 @@
     /* margin-top: 20px; */
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
+    word-break: break-all;
 }
 
 .top-level-container{

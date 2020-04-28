@@ -28,6 +28,8 @@ class Api::TransactionsController < ApplicationController
                 render json: ['Invalid transaction! Amount cannot be 0.'], status: 422
             elsif @transaction.body == ''
                 render json: ['Invalid transaction! Message cannot be empty.'], status: 422
+            elsif @transaction.body.length > 50
+                render json: ['Invalid transaction! Message cannot exceed 50 characters.'], status: 422
             elsif !@transaction.amount
                 render json: ['Invalid transaction! Payment amount is required.'], status: 422
             else

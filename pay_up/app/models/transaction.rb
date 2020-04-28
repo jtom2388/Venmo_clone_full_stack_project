@@ -14,6 +14,7 @@ class Transaction < ApplicationRecord
 
     validates :amount, :body, :payer_id, :recipient_id, presence: true
     validates :amount, numericality: true
+    validates :body, length: { maximum: 50 }
 
     validate :valid_payment
 

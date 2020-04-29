@@ -155,10 +155,12 @@
     padding-left: 10px;
     padding-right: 10px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .pay-button:hover{
-    font-weight: bold;
+    background-color: #ededed;
+    color: #3D95CE;
 }
 
 .request{

@@ -105,7 +105,7 @@ class LoginForm extends React.Component {
       <div className='footer'>
           <div className='icons-container'>
               <div className='icons'>
-                  <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project">
+                  <a href="https://github.com/jtom2388/Venmo_clone_full_stack_project/tree/master/pay_up">
                       <i className="fab fa-github-alt"></i>
                   </a>
               </div>

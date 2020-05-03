@@ -16,7 +16,8 @@ const mapStateToProps = state => ({
     username: state.ui.modalUserReducer.username,
     currentUserId: state.session.id,
     allUsers: Object.values(state.entities.user),
-    transactionErrors: state.errors.transactionErrors
+    transactionErrors: state.errors.transactionErrors,
+    currentUser: state.entities.users[state.session.id]
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -35,8 +35,8 @@ class TransactionForm extends React.Component{
         return(
             <div>
                 <form className='transaction-form' onSubmit={(e) => this.handleSubmit(e, this.props.username)}>
-                    <h1 className='transaction-header'>Pay</h1>
-                    <h2 className='balance-header'></h2>
+                    <h1 className='transaction-header'>Available Balance: ${this.props.currentUser.balance}</h1>
+                    {/* <h2 className='balance-header'>{this.props.currentUser.balance}</h2> */}
                     {/* <label> */}
                     <input className='recipient' type="text" value={this.props.username}/>
                     {/* </label> */}

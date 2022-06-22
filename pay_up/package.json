@@ -5,7 +5,7 @@
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
     "@babel/preset-react": "^7.8.3",
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "babel-polyfill": "^6.22.0",
     "babel-loader": "^8.0.6",
     "react": "^16.13.0",
